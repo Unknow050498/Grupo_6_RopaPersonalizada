@@ -1,10 +1,10 @@
 # Grupo_6_RopaPersonalizada
 
 ### Referencias
-https://www.matchesfashion.com/intl/
-https://mascaradelatex.com
-https://www.pullandbear.com/mx/
-https://www.designhill.com/custom 
+https://www.matchesfashion.com/intl/ <br /> 
+https://mascaradelatex.com <br />
+https://www.pullandbear.com/mx/ <br />
+https://www.designhill.com/custom <br />
 
 ### Breve descripción de los integrantes del equipo.
 
