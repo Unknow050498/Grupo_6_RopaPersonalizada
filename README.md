@@ -17,5 +17,5 @@ y Full Stack NodeJS
 Ingeníero en Sistemas Computacionales <br />
 23 años <br />
 Estado de México <br />
-Estudiao actualmente ingeniería en desarrollo de software, python
+Estudio actualmente ingeniería en desarrollo de software, python
 y programador web full-stack
