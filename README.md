@@ -9,7 +9,8 @@ https://www.designhill.com/custom <br />
 ### Breve descripción de los integrantes del equipo.
 
 #### Sandra De Los Santos
-Diseñadora gráfica, 33 años CDMX
+Diseñadora gráfica <br />
+33 años CDMX <br />
 Actualmente estudiante de UX/UI Avanzado
 y Full Stack NodeJS
 
