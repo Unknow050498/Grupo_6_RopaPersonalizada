@@ -1,0 +1,63 @@
+body{
+    margin: 0 20px;
+}
+
+.logo_barraBusqueda{
+    display: flex;
+}
+.logo{
+    width: 15%;
+    height: 100px;
+}
+
+.searchClothes{
+    text-indent: 10px;
+    margin-left: auto;
+    margin-top:auto;
+    margin-bottom: auto;
+    border-radius: 5px;
+    height: 30px;
+    width: 30%;
+}
+button{
+    margin-top:auto;
+    margin-bottom: auto;
+    height:30px;
+}
+
+/* NAV */
+nav {
+    border: 1px solid black;
+    background-color: rgb(223, 218, 218);
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*NAV UL*/  
+nav .menu {
+    display: flex;
+    list-style: none;
+}
+/* NAV LI */
+nav li{
+    margin:-5px 40px -5px 0;
+}
+/* UL A */
+.menu a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.favorite{
+    margin-left: auto;
+}
+
+.favorite a:hover{
+    color: red;
+}
+.login a:hover{
+    color: #143fca;
+}
+.buy a:hover{
+    color: rgb(145, 141, 138);
+}
