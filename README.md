@@ -20,3 +20,10 @@ Ingeníero en Sistemas Computacionales <br />
 Estado de México <br />
 Estudio actualmente ingeniería en desarrollo de software, python
 y programador web full-stack
+
+
+#### Cesaréo Hernaández
+Informatica <br />
+26 años <br />
+MTY, Nuevo Leon <br />
+Estudio desarrollo Web. 
