@@ -22,8 +22,17 @@ Estudio actualmente ingeniería en desarrollo de software, python
 y programador web full-stack
 
 
-#### Cesaréo Hernaández
+#### Cesaréo Hernández
 Informatica <br />
 26 años <br />
 MTY, Nuevo Leon <br />
 Estudio desarrollo Web. 
+
+
+#### Amber Maglia 
+Lic. En Administración Financiera <br />
+24 años <br />
+Querétaro <br />
+He tomado programación en HTML, CSS y Java hace años, recientemente
+R y otros lenguajes de uso menos común y trabajo en una fintech
+de verificación de identidad digital; usamos APIs y SCRUM, y me encanta la programación! 
