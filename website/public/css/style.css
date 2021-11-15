@@ -1,5 +1,7 @@
 body{
     margin: 0 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
 }
 
 .logo_barraBusqueda{
@@ -8,7 +10,7 @@ body{
 }
 
 .logo{
-    width: 15%;
+    
     height: 100px;
 }
 
@@ -45,10 +47,9 @@ button{
 /* NAV */
 nav {
     border: 1px solid black;
-    background-color: rgb(223, 218, 218);
-    font-weight: bold;
-    font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: black;
+    font-size: 14px;
+   
 }
 /*NAV UL*/  
 nav .menu {
@@ -61,7 +62,7 @@ nav li{
 }
 /* UL A */
 .menu a{
-    color: #000000;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -69,16 +70,10 @@ nav li{
     margin-left: auto;
 }
 
-.favorite a:hover{
-    color: red;
-}
-.login a:hover{
-    color: #143fca;
-}
-.buy a:hover{
-    color: rgb(145, 141, 138);
-}
+a:hover{
+    color: #E8AE4A;
 
+}
 /*================================= SECTION =================================*/
 .carousel{
     border: 1px solid rgb(154, 154, 154);
@@ -109,21 +104,25 @@ nav li{
     display: block;
     text-align: center;
     margin: auto 10px;
-    border: 1px solid #000;
-    background-color: rgb(223, 218, 218);
+    background-color: black;
+    color:white;
 }
 .imagen{
-    background-color: white;
+    background-color: rgb(231, 231, 231);
+    height: 200px;
+    width: 100%;
+
 }
 
 .imagen img{
-    height: 200px;
+    height: 40%;
     width: 100%;
     
 }
 .price{
-    background-color: rgb(155, 154, 154);
+    background-color: #E8AE4A;
     padding: 1px;
+    color: white;
 }
 
 
@@ -134,7 +133,7 @@ nav li{
     height: 16px;
 }
 .heart:hover{
-   color: rgb(255, 0, 0);
+   color: #E8AE4A;
    
    transform: rotate(360deg);
    transition: 1090ms, transform 1s;
@@ -146,7 +145,9 @@ footer{
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgb(223, 218, 218);
+    background-color: black;
+    color:white;
+    font-size: 12px;
 }
 .containerFooter{
     width: 80%;
@@ -162,7 +163,7 @@ footer{
 }
 
 .footerContainerEmail{
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
 .formEmail{
@@ -188,12 +189,13 @@ footer{
 .fa-paper-plane{
     margin: auto;
     margin-left: 2px;
-    margin-right: 5px;
+    margin-right: 2px;
     height: 18px;
+    color: #E8AE4A;
 }
 
 .fa-paper-plane:hover{
-    color: rgb(11, 11, 238);
+    color: #E8AE4A;
     transform: rotate(360deg);
     transition: 1090ms, transform 1s;
 }
@@ -209,6 +211,7 @@ footer{
 }
 .copyright{
     width: 100%;
+    font-size: 10px;
 }
 .social-media{
     display: flex;
@@ -216,14 +219,14 @@ footer{
     margin-left: auto;
     width: 30%;
     font-size: 25px;
-    color: black;
+    color: white;
 }
 
 .social-media a{
     width: 10%;
     text-align: center;
     margin: auto;
-    color: black;
+    color: white;
 }
 
 .fa-facebook-f:hover{
