@@ -72,9 +72,9 @@ nav li{
 
 a:hover{
     color: #E8AE4A;
-
 }
-/*================================= SECTION =================================*/
+
+/*================================= SECTION GLOABl =================================*/
 .carousel{
     border: 1px solid rgb(154, 154, 154);
 }
@@ -85,21 +85,21 @@ a:hover{
 .carousel-items img{
     width: 50%;
     height: 250px;
-   
 }
 
-/* Contenedor de los productos */
+/*============================== Contenedor de los productos ==============================*/
 .container{
     margin-top: 30px;
     width: 100%;
 }
+
 .products{
     display: flex;
-    width: 80%;
+    justify-content: center;
     margin: auto;
 }
 
-/* Imagenes e Información */
+/*===================== Imagenes e Información =====================*/
 .product{
     display: block;
     text-align: center;
@@ -107,25 +107,7 @@ a:hover{
     background-color: black;
     color:white;
 }
-.imagen{
-    background-color: rgb(231, 231, 231);
-    height: 200px;
-    width: 100%;
-
-}
-
-.imagen img{
-    height: 40%;
-    width: 100%;
-    
-}
-.price{
-    background-color: #E8AE4A;
-    padding: 1px;
-    color: white;
-}
-
-
+/* Corazon favorito del ptroducto */
 .heart{
     float: right;
     margin-top: 10px;
@@ -139,9 +121,28 @@ a:hover{
    transition: 1090ms, transform 1s;
 }
 
+/* Imagen del producto */
+.imagen{
+    background-color: rgb(231, 231, 231);
+    height: 200px;
+    width: 100%;
+
+}
+.imagen img{
+    height: 40%;
+    width: 100%;
+    
+}
+.price{
+    background-color: #E8AE4A;
+    padding: 1px;
+    color: white;
+}
+
+/*============================== FOOTER GLOBAL ==============================*/
 footer{
     border: 1px solid #000;
-    margin-top: 20%;
+    margin-top: 100px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -185,6 +186,7 @@ footer{
     border: none;
     border-left: 1px solid #000;
     margin-right: auto;
+    opacity: 0.6;
 }
 .fa-paper-plane{
     margin: auto;
@@ -193,11 +195,8 @@ footer{
     height: 18px;
     color: #E8AE4A;
 }
-
-.fa-paper-plane:hover{
-    color: #E8AE4A;
-    transform: rotate(360deg);
-    transition: 1090ms, transform 1s;
+.btnSend:hover{
+    opacity: 1;
 }
 
 .footer-social-networks {
