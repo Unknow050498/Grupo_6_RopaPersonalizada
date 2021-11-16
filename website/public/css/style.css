@@ -4,6 +4,7 @@ body{
     font-size: 14px;
 }
 
+/*============================== HEADER GLOBAL ==============================*/
 .logo_barraBusqueda{
     display: flex;
     justify-content: space-between;
@@ -42,8 +43,6 @@ button{
     height: 15px;
 }
 
-
-
 /* NAV */
 nav {
     border: 1px solid black;
@@ -51,7 +50,7 @@ nav {
     font-size: 14px;
    
 }
-/*NAV UL*/  
+/* NAV UL */  
 nav .menu {
     display: flex;
     list-style: none;
@@ -74,7 +73,7 @@ a:hover{
     color: #E8AE4A;
 }
 
-/*================================= SECTION GLOABl =================================*/
+/*================================= SECTION GLOABAL =================================*/
 .carousel{
     border: 1px solid rgb(154, 154, 154);
 }
@@ -126,12 +125,10 @@ a:hover{
     background-color: rgb(231, 231, 231);
     height: 200px;
     width: 100%;
-
 }
 .imagen img{
     height: 40%;
-    width: 100%;
-    
+    width: 100%;  
 }
 .price{
     background-color: #E8AE4A;
@@ -139,27 +136,11 @@ a:hover{
     color: white;
 }
 
-<<<<<<< HEAD
-/*============================== FOOTER GLOBAL ==============================*/
-
-.heart{
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-    height: 16px;
-}
-.heart:hover{
-   color: #E8AE4A;
-   
-   transform: rotate(360deg);
-   transition: 1090ms, transform 1s;
-}
-img{
-    width: 100%;
-}
+/*============================== PRODUCTO.HTML ==============================*/
 .detalles{
     display: flex;
     justify-content: center;
+    border: 1px solid rgb(154, 154, 154);
 }
 .detalles-container{
  margin: auto;
@@ -169,16 +150,38 @@ img{
     width: 15%;
     margin-right:2%;
 }
+
+/*========================== Foto del producto principal ===========================*/
 .FotoProducto{
     width: 40%;
     margin-right:2%;
 }
+.imagenPrincipal{
+    width: 100%;
+}
+
+/*========================== Información del producto ===========================*/
 .Informacion{
     width: 25%;
 }
-.descripcion-2{
-    font-size: 12px;
+
+/*========================== Botones de tallas ===========================*/
+.btn-secundario{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    width: 22%;
+    height: 50px;
+    cursor: pointer;
 }
+.btn-secundario:hover{
+    border: 1px solid black;
+}
+.btn-secundario:focus{
+    border: 1px solid black;
+}
+
+/*========================== Boton Agregar al Carrito y Corazón ===========================*/
 .btn-principal{
     background-color:#E8AE4A;
     border-radius: 5px;
@@ -187,21 +190,17 @@ img{
     padding: 5%;
     color: white;
     border: none;
+    cursor: pointer;
 }
-.btn-secundario{
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    width: 22%;
-    height: 50px;
+.buycar-heart{
+    display: flex;
 }
-.btn-secundario:hover{
-    border: 1px solid black;
+.buycar-heart svg{
+    margin-top: 6px;
 }
-.btn-secundario::selection{
-    border: 1px solid black;
-}
+/*===================================================================================*/
 
+/*============================== FOOTER GLOBAL ==============================*/
 footer{
     border: 1px solid #000;
     margin-top: 100px;
