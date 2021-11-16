@@ -10,7 +10,7 @@ body{
 }
 
 .logo{
-    
+    width: 30%;
     height: 100px;
 }
 
@@ -139,7 +139,69 @@ a:hover{
     color: white;
 }
 
+<<<<<<< HEAD
 /*============================== FOOTER GLOBAL ==============================*/
+
+.heart{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 16px;
+}
+.heart:hover{
+   color: #E8AE4A;
+   
+   transform: rotate(360deg);
+   transition: 1090ms, transform 1s;
+}
+img{
+    width: 100%;
+}
+.detalles{
+    display: flex;
+    justify-content: center;
+}
+.detalles-container{
+ margin: auto;
+ max-width: 1200px;
+}
+.miniaturas{
+    width: 15%;
+    margin-right:2%;
+}
+.FotoProducto{
+    width: 40%;
+    margin-right:2%;
+}
+.Informacion{
+    width: 25%;
+}
+.descripcion-2{
+    font-size: 12px;
+}
+.btn-principal{
+    background-color:#E8AE4A;
+    border-radius: 5px;
+    height: 50px;
+    width: 80%;
+    padding: 5%;
+    color: white;
+    border: none;
+}
+.btn-secundario{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    width: 22%;
+    height: 50px;
+}
+.btn-secundario:hover{
+    border: 1px solid black;
+}
+.btn-secundario::selection{
+    border: 1px solid black;
+}
+
 footer{
     border: 1px solid #000;
     margin-top: 100px;
