@@ -3,9 +3,11 @@ const app = express();
 const path = require('path');
 
 /*==================== LLAMA A LOS ARCHIVOS DEL VIEWS ====================*/
-
-
 app.get('/',(req, res) => {
+    res.sendFile(path.join(__dirname, 'views/index.html'));
+});
+
+app.get('/producto',(req, res) => {
     res.sendFile(path.join(__dirname, 'views/producto.html'));
 });
 

@@ -140,7 +140,6 @@ a:hover{
 .detalles{
     display: flex;
     justify-content: center;
-    border: 1px solid rgb(154, 154, 154);
 }
 .detalles-container{
  margin: auto;
@@ -177,9 +176,11 @@ a:hover{
 .btn-secundario:hover{
     border: 1px solid black;
 }
+
 .btn-secundario:focus{
     border: 1px solid black;
 }
+
 
 /*========================== Boton Agregar al Carrito y Corazón ===========================*/
 .btn-principal{
@@ -191,6 +192,10 @@ a:hover{
     color: white;
     border: none;
     cursor: pointer;
+    opacity: 0.6;
+}
+.btn-principal:hover{
+    opacity: 1;
 }
 .buycar-heart{
     display: flex;
