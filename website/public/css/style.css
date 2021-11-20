@@ -31,13 +31,14 @@ body{
     outline: none;
     border: transparent;
 }
+/*
 button{
     margin: auto;
     height: 30px;
     background-color: transparent;
     border: none;
     border-left: 1px solid #000;
-}
+}*/
 .fa-search{
     margin: auto 10px;
     height: 15px;
@@ -97,6 +98,14 @@ a:hover{
     justify-content: center;
     margin: auto;
 }
+.product-info a{
+    color: white;
+    text-decoration: none;
+}
+
+.product-info a:hover{
+    color: #E8AE4A;
+}
 
 /*===================== Imagenes e Información =====================*/
 .product{
@@ -149,6 +158,9 @@ a:hover{
     width: 15%;
     margin-right:2%;
 }
+.subtitulos{
+    text-align: center;
+}
 
 /*========================== Foto del producto principal ===========================*/
 .FotoProducto{
@@ -165,7 +177,7 @@ a:hover{
 }
 
 /*========================== Botones de tallas ===========================*/
-.btn-secundario{
+.btn-tallas{
     background-color: white;
     border: none;
     border-radius: 5px;
@@ -192,10 +204,10 @@ a:hover{
     color: white;
     border: none;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 1;
 }
 .btn-principal:hover{
-    opacity: 1;
+    opacity: 0.8;
 }
 .buycar-heart{
     display: flex;
@@ -203,6 +215,8 @@ a:hover{
 .buycar-heart svg{
     margin-top: 6px;
 }
+
+
 /*===================================================================================*/
 
 /*============================== FOOTER GLOBAL ==============================*/
@@ -318,4 +332,66 @@ footer{
     font-weight: bold;
     transform: rotate(360deg);
     transition: 1090ms, transform 1s;
+}
+
+/*============================== FORMULARIO ==============================*/
+.contenedor{
+    margin: auto;
+    width: 50%;
+    padding-top: 5%;
+}
+.formulario{
+    margin: 10px 0;
+}
+.etiquetas{
+    font-weight: 900;
+    
+}
+input[type=text], input[type=password], input[type=date]{
+    width: 79%;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+input[type=radio], input[type=checkbox]{
+    margin: 0 10px;
+}
+
+.registro a{
+    color: #E8AE4A;
+    opacity: 1;
+}
+
+.registro a:hover{
+    opacity: 0.8;
+}
+.botones{
+   display: flex;
+   justify-content:start;
+   flex-wrap: nowrap;
+}
+.botones .btn-principal{
+    width: 40%;
+}
+
+.btn-secundario{
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 40%;
+    height: 50px;
+    cursor: pointer;
+}
+.btn-secundario:hover{
+    background-color: black;
+    color: white;
+}
+
+.foto-perfil{
+    margin: auto;
+    width: 50%;
+    height: 200px;
+    background-color: gray;
+    opacity: 0.5;
+    border-radius: 50%;
 }
