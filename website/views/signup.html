@@ -16,7 +16,7 @@
     <header class="cabecera">
         <div class="logo_barraBusqueda">
             <img src="img/logo.png" class="logo" alt="Logo" title="Logo"> <!-- LOGO -->
-            <form action="" method="" class="searchbar">
+            <div class="searchbar">
                 <!--================ BARRA DE BUSQUEDA ================-->
                 <input type="search" class="inputSearch" name="searchClothes" placeholder="Busca la ropa que te gusta.">
                 <!--======================= BOTON DE BUSQUEDA CON ICONO =======================-->
@@ -30,7 +30,7 @@
                         </path>
                     </svg>
                 </button>
-            </form>
+            </div>
             <!--==========================================================================-->
         </div>
         <nav>
@@ -77,20 +77,51 @@
             </ul>
         </nav>
     </header>
-    <main class="mainLogin">
-        <!--=============================================== LOGIN =====================================================-->
-            <form action="" method="post" class="formularyLogin">
-                <div class="containerFormLogin">
-                    <input type="text" name="usernameLogin" id="usernameLogin" class="usernameLogin" placeholder="Nombre de usuario" required>
-                    <input type="password" name="passwordLogin" id="passwordLogin" class="passwdLogin" placeholder="Contraseña" required>
+    <main class="mainSignUp">
+        <!--====================================== LOGIN ============================================-->
+        <form action="" method="post" class="formularySignUp">
+            <div class="profile">
+                <div class="profilePicture">
+
                 </div>
-                <div class="textSignup">
-                    <h4>¿Aun no tienes una cuenta? <a href="signup">Registrate</a></h4>
+                <input type="file" name="foto" id="foto" accept=".jpg, .png, .svg" >
+            </div>
+
+            <div class="containerFormSignUp">
+                <input type="text" name="nameSignUp" id="nameSignUp" class="nameSignUp" placeholder="Nombre(s) y Apellido" minlength="4" required>
+
+                <input type="text" name="usernameSignUp" id="usernameSignUp" placeholder="Nombre de usuario" minlength="2" require>
+
+                <input type="email" name="emailSignUp" id="emailSignUp" class="emailSignUp" placeholder="Correo Electrónico">
+
+                <input type="password" name="passwordSingUp" id="passwordSignUp" class="passwdSingUp" placeholder="Contraseña" required>
+                <input type="password" name="rpasswordSingUp" id="rasswordSignUp" class="passwdSingUp" placeholder="Confirmar contraseña" required>
+
+                <h4>Fecha de Nacimiento</h4>
+                <input type="date" name="nacimiento" id="nacimiento" class="nacimiento">
+
+                <span class="gender">
+                    <h4>Sexo</h4>
+                    <span class="spanMen">
+                        <input type="radio" name="radioSex" id="radioSex" class="radioSexMen">
+                        <label for="men">Hombre</label>
+                    </span>
+
+                    <span class="spanWomen">
+                        <input type="radio" name="radioSex" id="radioSex" class="radioSexWomen">
+                        <label for="women">Mujer</label>
+                    </span>
+                </span>
+                <div class="termsConditions">
+                    <input type="checkbox"  name="terms_conditions" id="terms-conditions" required><label>Aceptas
+                        nuestras Condiciones, la Política de datos y la Política de cookies.</label>
                 </div>
-                <div class="login">
-                    <input type="submit" name="bntLogin" id="btnLogin" class="btnLogin" value="Entrar">
-                </div>
-            </form>
+            </div>
+
+            <div class="signup">
+                <input type="submit" name="btnSignUp" id="btnSignUp" class="btnSignUp" value="Registrarte">
+            </div>
+        </form>
     </main>
     <!--=================================== FOOTER ===================================-->
     <footer>
