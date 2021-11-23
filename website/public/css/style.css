@@ -11,7 +11,7 @@ body{
 }
 
 .logo{
-    width: 30%;
+    width: 100%;
     height: 100px;
 }
 
@@ -76,15 +76,15 @@ nav li{
 
 /*================================= SECTION GLOABAL =================================*/
 .carousel{
-    border: 1px solid rgb(154, 154, 154);
+    border: transparent;
 }
 .carousel-items{
     display: flex;
     justify-content: center;
 }
 .carousel-items img{
-    width: 50%;
-    height: 250px;
+    width: 80%;
+    height: 450px;
 }
 
 /*============================== Contenedor de los productos ==============================*/
@@ -114,6 +114,7 @@ nav li{
     margin: auto 10px;
     background-color: black;
     color:white;
+    box-shadow: 3px 3px 4px rgb(0, 0, 0, 0.5);
 }
 /* Corazon favorito del ptroducto */
 .heart{
