@@ -14,6 +14,17 @@
 .subtitulos{
     text-align: center;
 }
+.detalles-container h4 {
+    color: gray;
+}
+.detalles-container h4 a{
+    text-decoration: none;
+    color: gray;
+    text-transform: uppercase;
+}
+h4 a:hover{
+    color: #E8AE4A;
+}
 
 /*========================== Foto del producto principal ===========================*/
 .FotoProducto{
@@ -30,13 +41,28 @@
 }
 
 /*========================== Botones de tallas ===========================*/
-.btn-tallas{
+.radio-tallas{
     background-color: white;
-    border: none;
-    border-radius: 5px;
-    width: 22%;
-    height: 50px;
-    cursor: pointer;
+    border: 0;
+    padding: auto;
+    margin: 10px;
+
+}
+
+.radio-tallas label{
+    color: black;
+    display: inline-block;
+    cursor:pointer;
+    padding: 5px 20px;
+}
+.radio-tallas input[type="radio"]{
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+
+.radio-tallas input[type="radio"]:checked +label{
+    color: #E8AE4A;
 }
 
 /*========================== Boton Agregar al Carrito y Corazón ===========================*/
@@ -142,8 +168,9 @@
 
 #btnSignUp{
     width: 60%;
-    height: 35px;
+    height: 50px;
     border-radius: 5px;
+    border: none;
     outline: none;
     background-color:#e9ae4a;
     color: #fff;
@@ -193,9 +220,10 @@
 
 #btnLogin{
     width: 50%;
-    height: 35px;
+    height: 50px;
     border-radius:5px;
     outline: none;
+    border: none;
     background-color:#e9ae4a;
     color: #fff;
     font-weight: bold;
