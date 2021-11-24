@@ -19,6 +19,10 @@ app.get('/signup',(req, res) => {
     res.sendFile(path.join(__dirname, 'views/signup.html'));
 });
 
+app.get('/shoppingCart',(req, res) => {
+    res.sendFile(path.join(__dirname, 'views/shoppingCart.html'));
+});
+
 /*==================== CONECTA CON LA CARPETA PUBLIC ====================*/
 app.use('/', express.static('public'));
 

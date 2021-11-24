@@ -7,13 +7,6 @@
  margin: auto;
  max-width: 1200px;
 }
-.miniaturas{
-    width: 15%;
-    margin-right:2%;
-}
-.subtitulos{
-    text-align: center;
-}
 .detalles-container h4 {
     color: gray;
 }
@@ -24,6 +17,14 @@
 }
 h4 a:hover{
     color: #E8AE4A;
+}
+
+.miniaturas{
+    width: 15%;
+    margin-right:2%;
+}
+.subtitulos{
+    text-align: center;
 }
 
 /*========================== Foto del producto principal ===========================*/
