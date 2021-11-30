@@ -4,25 +4,26 @@ const path = require('path');
 
 /*==================== LLAMA A LOS ARCHIVOS DEL VIEWS ====================*/
 app.get('/',(req, res) => {
-    res.sendFile(path.join(__dirname, 'views/index.html'));
+    res.render(path.join(__dirname, 'views/index.ejs'));
 });
 
 app.get('/product',(req, res) => {
-    res.sendFile(path.join(__dirname, 'views/product.html'));
+    res.render(path.join(__dirname, 'views/product.ejs'));
 });
 
 app.get('/login',(req, res) => {
-    res.sendFile(path.join(__dirname, 'views/login.html'));
+    res.render(path.join(__dirname, 'views/login.ejs'));
 });
 
 app.get('/signup',(req, res) => {
-    res.sendFile(path.join(__dirname, 'views/signup.html'));
+    res.render(path.join(__dirname, 'views/signup.ejs'));
 });
 
 app.get('/shoppingCart',(req, res) => {
-    res.sendFile(path.join(__dirname, 'views/shoppingCart.html'));
+    res.render(path.join(__dirname, 'views/shoppingcart.ejs'));
 });
 
+app.set('view engine', 'ejs');
 /*==================== CONECTA CON LA CARPETA PUBLIC ====================*/
 app.use('/', express.static('public'));
 

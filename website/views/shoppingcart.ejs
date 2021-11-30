@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Carrito de Compras - Cool Cloth</title>
+    <%- include('./partials/head.html') %>
+</head>
+
+<body>
+    <!--===================================  HEADER ===================================-->
+    <%- include ('partials/navBar.html') %>
+    <!--===============================================================================-->
+
+        <main class="mainShoppingCart">
+            <section>
+                <div class="producto1">
+                    <input type="checkbox" name="cloths" id="cloths">
+                    <img src="img/img_04.png" class="producto" alt="producto1">
+                    <ul class="info-product shopping-cart">
+                        <li class="tittle-product">
+                            <a href="product">Producto 1</a>
+                        </li>
+                        <li class="available">
+                            Disponible
+                        </li>
+                        <li class="product-gift">
+                            <label for="gift0">
+                                <input type="checkbox" name="gift0" id="gift0">
+                                Para regalo</label>
+                        </li>
+                        <li class="section-links">
+                            <div class="quantityProduct">
+                                <label for="">Cantidad:</label>
+                                <select name="quantity" class="quantity" id="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <span class="separator">|</span>
+                            <input type="submit" class="linksP" value="Eliminar">
+                            <span class="separator">|</span>
+                            <input type="submit" class="linksP" value="Ver productos similares">
+                            <span class="separator">|</span>
+                        </li>
+                    </ul>
+                    <span class="price-product-shoppingCart">$ 000.00 </span>
+                </div>
+                <div class="producto2">
+                    <input type="checkbox" name="cloths" id="cloths">
+                    <img src="img/img_02.png" class="producto" alt="producto1">
+                    <ul class="info-product shopping-cart">
+                        <li class="tittle-product">
+                            <a href="#">Producto 2</a>
+                        </li>
+                        <li class="available">
+                            Disponible
+                        </li>
+                        <li class="product-gift">
+                            <label for="gift1">
+                                <input type="checkbox" name="gift1" id="gift1">
+                                Para regalo</label>
+                        </li>
+                        <li class="section-links">
+                            <div class="quantityProduct">
+                                <label for="">Cantidad:</label>
+                                <select name="quantity" class="quantity" id="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <span class="separator">|</span>
+                            <input type="submit" class="linksP" value="Eliminar">
+                            <span class="separator">|</span>
+                            <input type="submit" class="linksP" value="Ver productos similares">
+                            <span class="separator">|</span>
+                        </li>
+                    </ul>
+                    <div class="price-product-shoppingCart">
+                        <span>$ 000.00 </span>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="totalPriceProduct">
+                    <form action="">
+                        <div class="totalP">
+                            <span>Total: </span>
+                            <span class="totalFinal">$000.00</span>
+                        </div>
+                        <input type="submit" class="payProducts" value="Procedesr a Pagar">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+    <!--=================================== FOOTER ===================================-->
+    <%- include ('partials/footer.html') %>
+    <!--==============================================================================-->
+</body>
+
+</html>
