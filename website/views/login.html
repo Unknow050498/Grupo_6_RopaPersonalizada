@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crea tu cuenta</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/icono_pestaña.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/product_SignUp_Login.css">
     <link rel="stylesheet" href="css/style.css">
@@ -15,7 +15,24 @@
     <!--===================================  HEADER ===================================-->
     <header class="cabecera">
         <div class="logo_barraBusqueda">
-            <a href="/"><img src="img/logo.png" class="logo" alt="Logo" title="Logo"></a> <!-- LOGO -->
+            <div class="containerMobileHeader">
+                <div class="logoMobile">
+                    <a href="/">
+                        <div class="logo"></div>
+                    </a> <!-- LOGO -->
+                </div>
+                <div class="navBarMobile">
+                    <div class="userMobile">
+                        <a href="login"><i class="fas fa-user-circle"></i></a>
+                    </div>
+                    <div class="shoppingCartMobile">
+                        <a href="shoppingCart"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                    <div class="burguer-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
             <form action="" method="" class="searchbar">
                 <!--================ BARRA DE BUSQUEDA ================-->
                 <input type="search" class="inputSearch" name="searchClothes" placeholder="Busca la ropa que te gusta.">
@@ -79,18 +96,20 @@
     </header>
     <main class="mainLogin">
         <!--=============================================== LOGIN =====================================================-->
-            <form action="" method="post" class="formularyLogin">
-                <div class="containerFormLogin">
-                    <input type="text" name="usernameLogin" id="usernameLogin" class="usernameLogin" placeholder="Nombre de usuario" required>
-                    <input type="password" name="passwordLogin" id="passwordLogin" class="passwdLogin" placeholder="Contraseña" required>
-                </div>
-                <div class="textSignup">
-                    <h4>¿Aun no tienes una cuenta? <a href="signup">Registrate</a></h4>
-                </div>
-                <div class="login">
-                    <input type="submit" name="bntLogin" id="btnLogin" class="btnLogin" value="Entrar">
-                </div>
-            </form>
+        <form action="" method="post" class="formularyLogin">
+            <div class="containerFormLogin">
+                <input type="text" name="usernameLogin" id="usernameLogin" class="usernameLogin"
+                    placeholder="Nombre de usuario" required>
+                <input type="password" name="passwordLogin" id="passwordLogin" class="passwdLogin"
+                    placeholder="Contraseña" required>
+            </div>
+            <div class="textSignup">
+                <h4>¿Aun no tienes una cuenta? <a href="signup">Registrate</a></h4>
+            </div>
+            <div class="login">
+                <input type="submit" name="bntLogin" id="btnLogin" class="btnLogin" value="Entrar">
+            </div>
+        </form>
     </main>
     <!--=================================== FOOTER ===================================-->
     <footer>

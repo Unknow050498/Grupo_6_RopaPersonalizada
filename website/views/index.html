@@ -5,20 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Cool Cloth</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/icono_pestaña.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider.css">
-
 </head>
 
 <body>
     <!--===================================  HEADER ===================================-->
     <header class="cabecera">
         <div class="logo_barraBusqueda">
-            <a href="/"><img src="img/logo.png" class="logo" alt="Logo" title="Logo"></a> <!-- LOGO -->
-            <div class="searchbar">
+            <div class="containerMobileHeader">
+                <div class="logoMobile">
+                    <a href="/">
+                        <div class="logo"></div>
+                    </a> <!-- LOGO -->
+                </div>
+                <div class="navBarMobile">
+                    <div class="userMobile">
+                        <a href="login"><i class="fas fa-user-circle"></i></a>
+                    </div>
+                    <div class="shoppingCartMobile">
+                        <a href="shoppingCart"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                    <div class="burguer-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <form action="" method="" class="searchbar">
                 <!--================ BARRA DE BUSQUEDA ================-->
                 <input type="search" class="inputSearch" name="searchClothes" placeholder="Busca la ropa que te gusta.">
                 <!--======================= BOTON DE BUSQUEDA CON ICONO =======================-->
@@ -26,13 +41,13 @@
                         data-icon="search" height="18px" class="svg-inline--fa fa-search fa-w-16" role="img"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 
-                        93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 
-                        99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 
-                        57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                            93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 
+                            99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 
+                            57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
                         </path>
                     </svg>
                 </button>
-            </div>
+            </form>
             <!--==========================================================================-->
         </div>
         <nav>
@@ -86,38 +101,38 @@
                 <div class="carousel-items">
                     <ul class="slides">
                         <li class="slide" id="slide1">
-                          <a href="#">
-                            <img src="img/banner_01.png" alt="photo 1">
-                          </a>
+                            <a href="#">
+                                <img src="img/banner_01.png" alt="photo 1">
+                            </a>
                         </li>
                         <li class="slide" id="slide2">
-                          <a href="#">
-                            <img src="img/banner_02.png" alt="photo 2">
-                          </a>
+                            <a href="#">
+                                <img src="img/banner_02.png" alt="photo 2">
+                            </a>
                         </li>
                         <li class="slide" id="slide3">
-                          <a href="#">
-                            <img src="img/banner_03.png" alt="photo 3">
-                          </a>
+                            <a href="#">
+                                <img src="img/banner_03.png" alt="photo 3">
+                            </a>
                         </li>
                         <li class="slide" id="slide4">
-                          <a href="#">
-                            <img src="img/banner_04.png" alt="photo 4">
-                          </a>
+                            <a href="#">
+                                <img src="img/banner_04.png" alt="photo 4">
+                            </a>
                         </li>
                         <li class="slide" id="slide5">
                             <a href="#">
-                              <img src="img/banner_01.png" alt="photo 5">
+                                <img src="img/banner_01.png" alt="photo 5">
                             </a>
-                          </li>
-                      </ul>
-                      <ul class="slider-controler">
+                        </li>
+                    </ul>
+                    <ul class="slider-controler">
                         <li><a href="#slide1">&bullet;</a></li>
                         <li><a href="#slide2">&bullet;</a></li>
                         <li><a href="#slide3">&bullet;</a></li>
                         <li><a href="#slide4">&bullet;</a></li>
                         <li><a href="#slide5">&bullet;</a></li>
-                      </ul>
+                    </ul>
                 </div>
             </div>
 
@@ -136,7 +151,9 @@
                             <img src="img/img_04.png" alt="">
                         </div>
                         <div class="product-info">
-                            <a href="producto"><h3>Producto 1</h3></a>
+                            <a href="product">
+                                <h3>Producto 1</h3>
+                            </a>
                             <p>CH M G EG</p>
                         </div>
                         <div class="price">
@@ -156,7 +173,9 @@
                             <img src="img/img_02.png" alt="">
                         </div>
                         <div class="product-info">
-                            <a href="producto"><h3>Producto 2</h3></a>
+                            <a href="producto">
+                                <h3>Producto 2</h3>
+                            </a>
                             <p>CH M G EG</p>
                         </div>
                         <div class="price">
@@ -173,10 +192,12 @@
                             </path>
                         </svg>
                         <div class="imagen">
-                            <img src="img/img_03.png"  alt="">
+                            <img src="img/img_03.png" alt="">
                         </div>
                         <div class="product-info">
-                            <a href="producto"><h3>Producto 3</h3></a>
+                            <a href="producto">
+                                <h3>Producto 3</h3>
+                            </a>
                             <p>CH M G EG</p>
                         </div>
                         <div class="price">
@@ -201,7 +222,9 @@
                             <img src="img/img_01.png" width="50%" alt="">
                         </div>
                         <div class="product-info">
-                            <a href="producto"><h3>Producto 4</h3></a>
+                            <a href="producto">
+                                <h3>Producto 4</h3>
+                            </a>
                             <p>CH M G EG</p>
                         </div>
                         <div class="price">
@@ -221,7 +244,9 @@
                             <img src="img/img_05.png" width="50%" alt="">
                         </div>
                         <div class="product-info">
-                            <a href="producto"><h3>Producto 5</h3></a>
+                            <a href="producto">
+                                <h3>Producto 5</h3>
+                            </a>
                             <p>CH M G EG</p>
                         </div>
                         <div class="price">
@@ -241,7 +266,9 @@
                             <img src="img/img_06.png" width="50%" alt="">
                         </div>
                         <div class="product-info">
-                            <a href="producto"><h3>Producto 6</h3></a>
+                            <a href="producto">
+                                <h3>Producto 6</h3>
+                            </a>
                             <p>CH M G EG</p>
                         </div>
                         <div class="price">
@@ -271,7 +298,8 @@
                     <div class="footerContainerEmail">
                         <h3>Correo Electronico</h3>
                         <div class="formEmail">
-                            <input type="email" class="inputEmail" name="" id="" placeholder="Ingrese su correo electrónico">
+                            <input type="email" class="inputEmail" name="" id=""
+                                placeholder="Ingrese su correo electrónico">
                             <button type="submit" class="btnSend"><svg aria-hidden="true" focusable="false"
                                     data-prefix="fas" data-icon="paper-plane"
                                     class="svg-inline--fa fa-paper-plane fa-w-16" role="img"

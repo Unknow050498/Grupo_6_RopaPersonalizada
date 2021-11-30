@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crea tu cuenta</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/icono_pestaña.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/product_SignUp_Login.css">
     <link rel="stylesheet" href="css/style.css">
@@ -15,7 +15,24 @@
     <!--===================================  HEADER ===================================-->
     <header class="cabecera">
         <div class="logo_barraBusqueda">
-            <a href="/"><img src="img/logo.png" class="logo" alt="Logo" title="Logo"></a> <!-- LOGO -->
+            <div class="containerMobileHeader">
+                <div class="logoMobile">
+                    <a href="/">
+                        <div class="logo"></div>
+                    </a> <!-- LOGO -->
+                </div>
+                <div class="navBarMobile">
+                    <div class="userMobile">
+                        <a href="login"><i class="fas fa-user-circle"></i></a>
+                    </div>
+                    <div class="shoppingCartMobile">
+                        <a href="shoppingCart"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                    <div class="burguer-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
             <div class="searchbar">
                 <!--================ BARRA DE BUSQUEDA ================-->
                 <input type="search" class="inputSearch" name="searchClothes" placeholder="Busca la ropa que te gusta.">
@@ -84,18 +101,23 @@
                 <div class="profilePicture">
 
                 </div>
-                <input type="file" name="foto" id="foto" accept=".jpg, .png, .svg" >
+                <input type="file" name="foto" id="foto" accept=".jpg, .png, .svg">
             </div>
 
             <div class="containerFormSignUp">
-                <input type="text" name="nameSignUp" id="nameSignUp" class="nameSignUp" placeholder="Nombre(s) y Apellido" minlength="4" required>
+                <input type="text" name="nameSignUp" id="nameSignUp" class="nameSignUp"
+                    placeholder="Nombre(s) y Apellido" minlength="4" required>
 
-                <input type="text" name="usernameSignUp" id="usernameSignUp" placeholder="Nombre de usuario" minlength="2" require>
+                <input type="text" name="usernameSignUp" id="usernameSignUp" placeholder="Nombre de usuario"
+                    minlength="2" require>
 
-                <input type="email" name="emailSignUp" id="emailSignUp" class="emailSignUp" placeholder="Correo Electrónico">
+                <input type="email" name="emailSignUp" id="emailSignUp" class="emailSignUp"
+                    placeholder="Correo Electrónico">
 
-                <input type="password" name="passwordSingUp" id="passwordSignUp" class="passwdSingUp" placeholder="Contraseña" required>
-                <input type="password" name="rpasswordSingUp" id="rasswordSignUp" class="passwdSingUp" placeholder="Confirmar contraseña" required>
+                <input type="password" name="passwordSingUp" id="passwordSignUp" class="passwdSingUp"
+                    placeholder="Contraseña" required>
+                <input type="password" name="rpasswordSingUp" id="rasswordSignUp" class="passwdSingUp"
+                    placeholder="Confirmar contraseña" required>
 
                 <h4>Fecha de Nacimiento</h4>
                 <input type="date" name="nacimiento" id="nacimiento" class="nacimiento">
@@ -113,7 +135,7 @@
                     </span>
                 </span>
                 <div class="termsConditions">
-                    <input type="checkbox"  name="terms_conditions" id="terms-conditions" required><label>Aceptas
+                    <input type="checkbox" name="terms_conditions" id="terms-conditions" required><label>Aceptas
                         nuestras Condiciones, la Política de datos y la Política de cookies.</label>
                 </div>
             </div>

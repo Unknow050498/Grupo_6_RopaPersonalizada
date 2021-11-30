@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto - Ropa Personalizada</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/icono_pestaña.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/product_SignUp_Login.css">
     <link rel="stylesheet" href="css/style.css">
@@ -15,7 +15,24 @@
     <!--===================================  HEADER =================================== -->
     <header class="cabecera">
         <div class="logo_barraBusqueda">
-            <a href="/"><img src="img/logo.png" class="logo" alt="Logo" title="Logo"></a> <!-- LOGO -->
+            <div class="containerMobileHeader">
+                <div class="logoMobile">
+                    <a href="/">
+                        <div class="logo"></div>
+                    </a> <!-- LOGO -->
+                </div>
+                <div class="navBarMobile">
+                    <div class="userMobile">
+                        <a href="login"><i class="fas fa-user-circle"></i></a>
+                    </div>
+                    <div class="shoppingCartMobile">
+                        <a href="shoppingCart"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                    <div class="burguer-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
             <div class="searchbar">
                 <!--================ BARRA DE BUSQUEDA ================-->
                 <input type="search" class="inputSearch" name="searchClothes" placeholder="Busca la ropa que te gusta.">
@@ -80,7 +97,7 @@
 
     <main>
         <section class="detalles-container">
-            <h4><a href="/">Inicio</a> > <a href="index">Mujer</a> > <a href="index">Producto 1</a></h4>
+            <h4><a href="/">Inicio</a> > <a href="#">Mujer</a> > <a href="product">Producto 1</a></h4>
             <div class="detalles">
                 <div class="miniaturas">
                     <img src="img/playera_mariachi_min.png" alt="Playera de mariachi">
@@ -105,12 +122,12 @@
                     <label for="G">G</label>
                     <input type="radio" class="radio-tallas" name="talla" id="EG"></input>
                     <label for="EG">EG</label>
-                    
+
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet sunt consectetur provident quasi
                         expedita quos libero doloremque, laudantium incidunt, veniam similique excepturi hic nobis
                         soluta explicabo labore. Iste, ab iusto!</p>
                     <div class="buycar-heart">
-                      
+
                         <button class="btn-principal" onclick="window.location.href='#'">Agregar al carrito</button>
                         <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" height="36px"
                             id="heartProduct" class="svg-inline--fa fa-heart fa-w-16" role="img"
@@ -152,7 +169,9 @@
                         <img src="img/img_01.png" alt="">
                     </div>
                     <div class="product-info">
-                        <a href="producto"><h3>Producto 1</h3></a>
+                        <a href="producto">
+                            <h3>Producto 1</h3>
+                        </a>
                         <p>CH M G EG</p>
                     </div>
                     <div class="price">
@@ -171,7 +190,9 @@
                         <img src="img/img_02.png" alt="">
                     </div>
                     <div class="product-info">
-                        <a href="producto"><h3>Producto 2</h3></a>
+                        <a href="producto">
+                            <h3>Producto 2</h3>
+                        </a>
                         <p>CH M G EG</p>
                     </div>
                     <div class="price">
@@ -190,7 +211,9 @@
                         <img src="img/img_06.png" alt="">
                     </div>
                     <div class="product-info">
-                        <a href="producto"><h3>Producto 3</h3></a>
+                        <a href="producto">
+                            <h3>Producto 3</h3>
+                        </a>
                         <p>CH M G EG</p>
                     </div>
                     <div class="price">
@@ -220,7 +243,8 @@
                     <div class="footerContainerEmail">
                         <h3>Correo Electronico</h3>
                         <div class="formEmail">
-                            <input type="email" class="inputEmail" name="" id="" placeholder="Ingrese su correo electrónico">
+                            <input type="email" class="inputEmail" name="" id=""
+                                placeholder="Ingrese su correo electrónico">
                             <button type="submit" class="btnSend"><svg aria-hidden="true" focusable="false"
                                     data-prefix="fas" data-icon="paper-plane"
                                     class="svg-inline--fa fa-paper-plane fa-w-16" role="img"

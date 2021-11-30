@@ -7,8 +7,8 @@ app.get('/',(req, res) => {
     res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
-app.get('/producto',(req, res) => {
-    res.sendFile(path.join(__dirname, 'views/producto.html'));
+app.get('/product',(req, res) => {
+    res.sendFile(path.join(__dirname, 'views/product.html'));
 });
 
 app.get('/login',(req, res) => {

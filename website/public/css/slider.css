@@ -15,8 +15,6 @@
 	100% { transform: translateX(-400%); }
 }
 
-* { box-sizing: border-box; }
-
 .carousel-items {
 	position: relative;
 }
