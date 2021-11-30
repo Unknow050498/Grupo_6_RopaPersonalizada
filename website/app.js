@@ -19,7 +19,7 @@ app.get('/signup',(req, res) => {
     res.render(path.join(__dirname, 'views/signup.ejs'));
 });
 
-app.get('/shoppingCart',(req, res) => {
+app.get('/shoppingcart',(req, res) => {
     res.render(path.join(__dirname, 'views/shoppingcart.ejs'));
 });
 

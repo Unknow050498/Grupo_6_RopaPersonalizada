@@ -331,8 +331,8 @@ footer{
         margin: 5px auto ;
     }
     
-    nav ul li{
-        margin:-5px 10px -5px 0;
+    nav li{
+        margin:-5px 25px -5px -10px;
         font-size: 13px;
     }
     .burguer-menu, .userMobile, .shoppingCartMobile{

@@ -28,7 +28,7 @@ h4 a:hover{
 }
 
 /*========================== Foto del producto principal ===========================*/
-.FotoProducto{
+.fotoProducto{
     width: 40%;
     margin-right:2%;
 }
@@ -37,49 +37,47 @@ h4 a:hover{
 }
 
 /*========================== Información del producto ===========================*/
-.Informacion{
+.informacion{
     width: 25%;
 }
 
 /*========================== Botones de tallas ===========================*/
-.radio-tallas{
-    background-color: white;
-    border: 0;
+section .radio-tallas{
+    background-color: rgb(240, 25, 25);
+    border: 1px solid black;
     padding: auto;
     margin: 10px;
-
 }
 
 .radio-tallas label{
-    color: black;
+    color: rgb(216, 29, 29);
     display: inline-block;
     cursor:pointer;
     padding: 5px 20px;
 }
-.radio-tallas input[type="radio"]{
+/* .radio-tallas input[type="radio"]{
     position: absolute;
     visibility: hidden;
     display: none;
-}
+} */
 
-.radio-tallas input[type="radio"]:checked +label{
+/* .radio-tallas input[type="radio"]:checked +label{
     color: #E8AE4A;
-}
+} */
 
 /*========================== Boton Agregar al Carrito y Corazón ===========================*/
-.btn-principal{
+.btnAddShoppingCart{
     background-color:#E8AE4A;
     border-radius: 5px;
     height: 50px;
     width: 80%;
-    padding: 5%;
     color: white;
     border: none;
     cursor: pointer;
     opacity: 1;
     font-size: 17px;
 }
-.btn-principal:hover{
+.btnAddShoppingCart:hover{
     opacity: 0.8;
 }
 .buycar-heart{
@@ -87,10 +85,43 @@ h4 a:hover{
 }
 .buycar-heart svg{
     margin-top: 6px;
+    margin-left: 10px;
 }
 .fa-heart:hover{
     color:#E8AE4A ;
     cursor: pointer;
+}
+
+/*========================= MEDIA QUERY PRODUCTO =========================*/
+/* Diseño para Smartpgone */
+@media screen and (max-width:599px){
+    section .detalles{
+        display: block;
+    }
+    .miniaturas{
+        display: none;
+    }
+    section .fotoProducto{
+        width: 100%;
+        margin-top: 15%;
+    }
+    section h1{
+        position: absolute;
+        top: 23%;
+    }
+    section .informacion{
+        margin: 50px auto;
+        width: 100%;
+    }
+    section div .btnAddShoppingCart{
+        font-size: 20px;
+    }
+
+}
+
+ /* Diseño para Tablet */
+@media screen and (min-width:600px) and (max-width:1023px){
+       
 }
 /*===========================================================================*/
 
@@ -111,7 +142,7 @@ h4 a:hover{
     outline: none;
 }
 
-.containerFormSignUp input{
+.containerForm input{
     display: block;
     width: 100%;
     height: 30px;
@@ -121,7 +152,7 @@ h4 a:hover{
 
 .profilePicture{
     margin: -20px auto 20px auto;
-    width: 40%;
+    width: 60%;
     height: 150px;
     background-color: rgb(199, 196, 196);
     border-radius: 50%;
@@ -181,6 +212,53 @@ h4 a:hover{
     margin-bottom: -15px;
 }
 
+/*========================== MEDIA QUERY SIGNUP ===========================*/
+/* Diseño para Smartphone */
+@media screen and (max-width:599px){
+    body .mainSignUp{
+        margin: 60px auto 50px auto;
+    }
+    section .formularySignUp{
+        width: 100%;
+        margin: 20px auto;
+    }
+    section .profilePicture{
+        width: 45%;
+    }
+    section .formSignUp input{
+        height: 45px;
+    }
+    section form #btnSignUp{
+        width: 100%;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* Diseño para Tablet */
+@media screen and (min-width:600px) and (max-width:1023px){
+    body .mainSignUp{
+        margin: 60px auto 0px auto;
+    }
+    section .formularySignUp{
+        width: 70%;
+        margin: 20px auto;
+    }
+    section .profilePicture{
+        width: 40%;
+        height: 180px;
+    }
+    section .formSignUp input{
+        height: 45px;
+    }
+    section form #btnSignUp{
+        width: 100%;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+/*===========================================================================*/
+
 /*========================== LOGIN FORM ===========================*/
 .mainLogin{
     margin-bottom: -30px;
@@ -230,4 +308,43 @@ h4 a:hover{
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
+}
+
+/*========================= MEDIA QUERY LOGIN =========================*/
+/* Diseño para Smartphone */
+@media screen and (max-width:599px){
+    section .formularyLogin{
+        width: 100%;
+    }
+    section .containerFormLogin input{
+        height: 45px;
+    }
+    section .login{
+        margin-top: 30px;
+    }
+    section div #btnLogin{
+        width: 100%;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* Diseño para Tablet */
+@media screen and (min-width:600px) and (max-width:1023px){
+    
+    section .formularyLogin{
+        width: 75%; 
+    }
+    section .containerFormLogin input{
+        height: 45px;
+        width: 100%;
+    }
+    section .login{
+        margin-top: 40px;
+    }
+    section div #btnLogin{
+        width: 80%;
+        height: 45px;
+        font-size: 18px;
+    }
 }
