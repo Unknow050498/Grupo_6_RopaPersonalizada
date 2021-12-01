@@ -319,6 +319,16 @@ footer{
     nav{
         display: none;
     }
+
+    section .product{
+        width: 70%;
+        margin-bottom: 30px;
+        opacity: 1;
+        cursor: pointer;
+    }
+    section .product:hover{
+        opacity: 0.8;
+    }
 }
 
 @media screen and (min-width:600px) and (max-width:1023px){

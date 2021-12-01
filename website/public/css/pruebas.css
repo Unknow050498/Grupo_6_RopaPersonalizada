@@ -1,0 +1,74 @@
+@media screen and (max-width:599px){
+    section .containerShoppingCart{
+        display: block;
+    }
+
+    section .totalPriceProduct{
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    section .producto1,section .producto2{
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        width: 100%;
+    }
+
+    section .producto{
+        width: 35%;
+        margin-right: 0;
+        margin-left: 5px;
+    }
+    .info-product{
+        margin: 0 auto;
+    }
+
+    section .price-product h2{
+        height: 25px;
+        margin: -5px auto 5px auto;
+    }
+
+    section .tittle-available{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #cloths, .product-gift {
+        display: none;
+    }
+
+    section .section-links{
+        display: block;
+        margin: 20px auto 10px auto;
+    }
+    section .quantityProduct{
+        width: 80%;
+    }        
+        
+    section .linksP{
+        border: 1px solid rgb(171, 167, 167);
+        border-radius: 5px;
+        margin: 10px auto;
+        height: 30px;
+        width: 120%;
+        text-align: center;
+    }
+
+    .separator, .delet-product{
+        display: none;
+    }
+}
+
+@media screen and (mai-width:600px) and (max-width: 1023px){
+
+
+}
+
+@media screen and (min-width:1024px){
+    .btnPay{
+        opacity: 0.8;
+    }
+    .btnPay:hover{
+        opacity: 1;
+    }
+}
