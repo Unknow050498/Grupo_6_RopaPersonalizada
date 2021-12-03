@@ -23,6 +23,10 @@ app.get('/shoppingcart',(req, res) => {
     res.render(path.join(__dirname, 'views/shoppingcart.ejs'));
 });
 
+app.get('/productadd',(req, res) => {
+    res.render(path.join(__dirname, 'views/productAdd.ejs'));
+});
+
 app.set('view engine', 'ejs');
 /*==================== CONECTA CON LA CARPETA PUBLIC ====================*/
 app.use('/', express.static('public'));

@@ -55,15 +55,7 @@ section .radio-tallas{
     cursor:pointer;
     padding: 5px 20px;
 }
-/* .radio-tallas input[type="radio"]{
-    position: absolute;
-    visibility: hidden;
-    display: none;
-} */
 
-/* .radio-tallas input[type="radio"]:checked +label{
-    color: #E8AE4A;
-} */
 
 /*========================== Boton Agregar al Carrito y Corazón ===========================*/
 .btnAddShoppingCart{
@@ -212,6 +204,82 @@ section .radio-tallas{
     margin-bottom: -15px;
 }
 
+/*========================== ADD PRODUCT FORM ===========================*/
+.containerFormAdd{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.formProductAdd{
+    margin: auto;
+    padding: 5%;
+}
+
+.quantityAdd{
+    border: 1px solid rgb(164, 163, 163);
+    background-color: #e9e9ed;
+    border-radius: 5px;
+    text-align: center;
+    text-indent: 5px;
+    padding: 3px;
+}
+.FormProcuctsAdd, .ProductAdd, .fotosPrductos{
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.descripcionAdd{
+    width: 70%;
+}
+.fotosPrductos{
+    width: 48%;
+}
+.FotoProdcuto{
+    width: 45%;
+}
+
+.productPicture {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(199, 196, 196);
+  }
+.ProductAddBtnform{
+    width: 30%;
+    margin: auto;
+}
+.ProductAddBtn{
+        width: 100%;
+        height: 50px;
+        border-radius:5px;
+        outline: none;
+        border: none;
+        background-color:#e9ae4a;
+        color: #fff;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin: auto;
+}
+/*========================== MEDIA PRODUCTADD ===========================*/
+/* Diseño para Smartphone */
+@media screen and (max-width:599px){
+    .FotoProdcuto{
+        width: 90%;
+    }
+    .ProductAddBtnform{
+        width: 90%;
+        margin: auto;
+    }
+     .FotoProdcuto input{
+        margin-left: -40px;
+    }
+
+}
+
+
 /*========================== MEDIA QUERY SIGNUP ===========================*/
 /* Diseño para Smartphone */
 @media screen and (max-width:599px){
@@ -309,6 +377,7 @@ section .radio-tallas{
     font-size: 15px;
     cursor: pointer;
 }
+
 
 /*========================= MEDIA QUERY LOGIN =========================*/
 /* Diseño para Smartphone */

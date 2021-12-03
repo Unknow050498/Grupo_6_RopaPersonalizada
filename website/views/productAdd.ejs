@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registro - Cool Cloth</title>
+    <%- include ('partials/head.html') %>
+</head>
+
+<body>
+    <!--===================================  HEADER ===================================-->
+    <%- include ('partials/navBar.html') %>
+        <!--===============================================================================-->
+
+        <main class="mainProductAdd">
+            <section>
+                <form action="" method="post" class="formularyProcuctAdd">
+                    <div class="containerFormAdd">
+                        <div class="formProductAdd">
+
+                            <div class="ProductAdd">
+                                <label for="quantityAdd">Tipo de produto:</label>
+                                <select name="quantityAdd" style="font-size: 14px; outline: none;" class="quantityAdd"
+                                    id="">
+                                    <option value="1">Playera dama</option>
+                                    <option value="2">Playera caballero</option>
+                                    <option value="3">Playera niño</option>
+                                    <option value="4">Sudadera niño</option>
+                                    <option value="5">Sudadera adulto</option>
+                                    <option value="6">Chamarra dama</option>
+                                    <option value="7">Chamarra caballero</option>
+                                </select>
+                            </div>
+                            <div class="FormProcuctsAdd">
+                                <label for="nombreProducto">Producto:</label>
+                                <input type="text" name="nombreProducto" id="nombreProducto" class="nameSignUp"
+                                    placeholder="Nombre del Producto" minlength="2" required>
+                            </div>
+                            <div class="FormProcuctsAdd">
+                                <label for="modeloProducto">Modelo:</label>
+                                <input type="text" name="modeloProducto" id="modeloProducto" class="nameSignUp"
+                                    placeholder="Modelo" minlength="2" required>
+                            </div>
+                            <div class="FormProcuctsAdd">
+                                <label for="cantidadProducto">Cantidad:</label>
+                                <input type="number" name="cantidadProducto" id="cantidadProducto"
+                                    placeholder="Cantidad" minlength="1" require>
+                            </div>
+                            <div class="ProductAdd">
+                                <label for="quantityAdd">Color:</label>
+                                <select name="quantityAdd" style="font-size: 14px; outline: none;" class="quantityAdd"
+                                    id="">
+                                    <option value="1">Blanco</option>
+                                    <option value="2">Negra</option>
+                                    <option value="3">Rojo</option>
+                                    <option value="4">Gris</option>
+                                    <option value="5">Gris oxford</option>
+                                    <option value="6">Rosa</option>
+                                    <option value="7">Morado</option>
+                                    <option value="8">Marino</option>
+                                    <option value="8">Azul cielo</option>
+                                </select>
+                            </div>
+
+                            <div class="ProductAdd">
+                                <label for="value">Talla:</label>
+                                <select name="quantityAdd" style="font-size: 14px; outline: none;" class="quantityAdd"
+                                    id="">
+                                    <option value="1">Extra chica</option>
+                                    <option value="2">Chica</option>
+                                    <option value="3">Mediana</option>
+                                    <option value="4">Grande</option>
+                                    <option value="5">Extra grande</option>
+                                    <option value="6">Doble extra grande</option>
+                                </select>
+                            </div>
+                            <div class="FormProcuctsAdd">
+                                <label for="precioProducto">Precio:</label>
+                                <input type="number" name="precioProducto" id="precioProducto" class="nameSignUp"
+                                    placeholder="$" minlength="1" required>
+                            </div>
+                            <div class="FormProcuctsAdd">
+                                <label for="precioProducto">Descripción:</label>
+                                <textarea rows="10" cols="50" name="descripcionProducto" id="descripcionProducto"
+                                    class="descripcionAdd" placeholder="Escribe una breve descripción del producto"
+                                    minlength="1" required></textarea>
+                            </div>
+                        </div>
+                        <div class="fotosPrductos">
+                        
+                            <div class="FotoProdcuto">
+                                <div class="productPicture" id="fotoProducto1"></div>
+                                <input type="file" class="" name="fotoProducto"  accept=".jpg, .png, .svg">
+                            </div>
+                            <div class="FotoProdcuto">
+                                <div class="productPicture" id="fotoProducto2"></div>
+                                <input type="file" name="fotoProducto"  accept=".jpg, .png, .svg">
+                            </div>
+                            <div class="FotoProdcuto">
+                                <div class="productPicture" id="fotoProducto3"></div>
+                                <input type="file" name="fotoProducto"  accept=".jpg, .png, .svg">
+                            </div>
+                            <div class="FotoProdcuto">
+                                <div class="productPicture" id="fotoProducto4" ></div>
+                                <input type="file" name="fotoProducto" accept=".jpg, .png, .svg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ProductAddBtnform">
+                        <input type="submit" name="btnSignUp" id="ProductAddBtn" class="ProductAddBtn" value="Agregar">
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!--=================================== FOOTER ===================================-->
+        <%- include ('partials/footer.html') %>
+            <!--==============================================================================-->
+</body>
+
+</html>
