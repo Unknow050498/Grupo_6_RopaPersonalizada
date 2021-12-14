@@ -1,0 +1,22 @@
+[
+ {
+  "id": 1,
+  "nombreApellido": "Sandra De Los Santos",
+  "usuario": "sand88",
+  "email": "sad.zoe@gmail.com",
+  "contrasena": "Sandra880326",
+  "fechaNacimiento": "26031988",
+  "genero": "femenino",
+  "imagen": "sandy.png"
+ },
+ {
+  "id": 2,
+  "nombreApellido": "Jose Carlos Lopez",
+  "usuario": "carlos88",
+  "email": "jo_carlos07@hotmail.com",
+  "contrasena": "Admin123",
+  "fechaNacimiento": "05041998",
+  "genero": "masculino",
+  "imagen": "jose.jpg"
+ }
+]
