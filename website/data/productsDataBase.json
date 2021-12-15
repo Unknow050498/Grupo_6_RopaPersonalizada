@@ -48,15 +48,5 @@
       "talla": "M",
       "descripcion": "Sudadera manga larfa, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
       "imagen": "sudaderaWWH001.jpeg"
-   },
-   {
-      "id": 6,
-      "tipo_producto": "sudadera caballero",
-      "modelo": "sudaderaWWH001",
-      "cantidad": 2,
-      "color": "blanca",
-      "talla": "M",
-      "descripcion": "Sudadera manga larfa, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
-      "imagen": "img_01.png"
    }
 ]
