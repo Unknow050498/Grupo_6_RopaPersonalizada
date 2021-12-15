@@ -116,6 +116,15 @@ nav li{
     box-shadow: 3px 3px 4px rgb(0, 0, 0, 0.5);
     position: relative;
 }
+.productCoolCloth{
+    display: block;
+    text-align: center;
+    margin: auto 10px 20px;
+    background-color: black;
+    color:white;
+    box-shadow: 3px 3px 4px rgb(0, 0, 0, 0.5);
+    position: relative;
+}
 /* Corazon favorito del ptroducto */
 .heart{
     color:rgb(195, 197, 198);

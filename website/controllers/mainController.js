@@ -2,22 +2,13 @@ const path = require('path');
 
 const mainC = {
     home: (req, res) => {
-        res.render('index')
+        res.render('index');
     },
-    product: (req, res) => {
-        res.render('product');
-    },
-    login: (req, res) => {
+    login: (req,res) => {
         res.render('login');
     },
-    signup: (req, res) => {
+    signup: (req,res) => {
         res.render('signup');
-    },
-    shoppingcart: (req, res) => {
-        res.render('shoppingcart');
-    },
-    productadd: (req, res) => {
-        res.render('productadd');
     }
 };
 

@@ -1,20 +1,23 @@
 const express = require('express');
 const app = express();
-const routes = require('./routes/mainRoutes');
 const path = require('path');
 
+/*==================== CONECTA CON LA CARPETA PUBLIC ====================*/
+app.use(express.static(path.join(__dirname, './public')));
+
 /*==================== LLAMA A LOS ARCHIVOS DEL VIEWS ====================*/
-app.use('/', routes);
+const mR = require('./routes/mainRoutes');
+const pR = require('./routes/productsRoutes');
+
+app.use('/', mR);
+app.use('/products', pR);
 
 /*========================================================================*/
 app.set('view engine', 'ejs');
-
-/*==================== CONECTA CON LA CARPETA PUBLIC ====================*/
-app.use(express.static(path.join(__dirname, 'public')));
 
 /*==================== CABRE EL PUERTO 3000 ====================*/
 app.listen(3000, () => {
     console.log('Corriendo servidor.');
 }); 
 
-
+module.exports = app;
