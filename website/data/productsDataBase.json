@@ -1,52 +1,57 @@
 [
-   {
-      "id": 1,
-      "tipo_producto": "playera dama",
-      "modelo": "playeraMSpiderman001",
-      "cantidad": 5,
-      "color": "gris",
-      "talla": "ch",
-      "descripcion": "Playera manga corta, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
-      "imagen": "playeraMSpiderman001.jpeg"
-   },
-   {
-      "id": 2,
-      "tipo_producto": "playera caballero",
-      "modelo": "playeraHSpiderman001",
-      "cantidad": 2,
-      "color": "negra",
-      "talla": "ch",
-      "descripcion": "Playera manga corta, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
-      "imagen": "playeraHSpiderman001.jpeg"
-   },
-   {
-      "id": 3,
-      "tipo_producto": "playera niño",
-      "modelo": "playeraNSpiderman001",
-      "cantidad": 3,
-      "color": "roja",
-      "talla": "ch",
-      "descripcion": "Playera manga corta, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
-      "imagen": "playeraNSpiderman001.jpeg"
-   },
-   {
-      "id": 4,
-      "tipo_producto": "sudadera dama",
-      "modelo": "sudaderaMCazafantasmas001",
-      "cantidad": 2,
-      "color": "gris oxford",
-      "talla": "M",
-      "descripcion": "Sudadera manga larga, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
-      "imagen": "sudaderaMCazafantasmas001.png"
-   },
-   {
-      "id": 5,
-      "tipo_producto": "sudadera caballero",
-      "modelo": "sudaderaWWH001",
-      "cantidad": 2,
-      "color": "blanca",
-      "talla": "M",
-      "descripcion": "Sudadera manga larfa, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
-      "imagen": "sudaderaWWH001.jpeg"
-   }
+ {
+  "id": 1,
+  "type-product": "playera dama",
+  "model": "playeraMSpiderman001",
+  "quantity-product": "5",
+  "color": "Gris",
+  "size": "Chica",
+  "price": "345",
+  "description": "Playera manga corta, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
+  "image": "playeraMSpiderman001.jpeg"
+ },
+ {
+  "id": 2,
+  "type-product": "playera caballero",
+  "model": "playeraHSpiderman001",
+  "quantity-product": "2",
+  "color": "Negro",
+  "size": "Chica",
+  "price": "745",
+  "description": "Playera manga corta, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
+  "image": "playeraHSpiderman001.jpeg"
+ },
+ {
+  "id": 3,
+  "type-product": "playera niño",
+  "model": "playeraNSpiderman001",
+  "quantity-product": "3",
+  "color": "Rojo",
+  "size": "Chica",
+  "price": "400",
+  "description": "Playera manga corta, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
+  "image": "playeraNSpiderman001.jpeg"
+ },
+ {
+  "id": 4,
+  "type-product": "sudadera dama",
+  "model": "sudaderaMCazafantasmas001",
+  "quantity-product": "2",
+  "color": "Gris oxford",
+  "size": "Mediana",
+  "price": "599",
+  "description": "Sudadera manga larga, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
+  "image": "sudaderaMCazafantasmas001.png"
+ },
+ {
+  "id": 5,
+  "type-product": "sudadera caballero",
+  "model": "sudaderaWWH001",
+  "quantity-product": "2",
+  "color": "Blanco",
+  "size": "Mediana",
+  "price": "329",
+  "description": "Sudadera manga larga, relaxed fit, Estampado en serigrafía sin tacto, 100% algodón, Hecho en México",
+  "image": "sudaderaWWH001.jpeg"
+ }
 ]

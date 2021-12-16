@@ -25,7 +25,7 @@
                             </path>
                         </svg>
                         <div class="imagen">
-                            <img src="/img/<%= products.imagen %>" alt="">
+                            <img src="/img/<%= products.image %>" alt="">
                         </div>
                         <div class="product-info">
                             <a href="/products">
@@ -34,7 +34,7 @@
                             <h3><%= products.talla %></h3>
                         </div>
                         <div class="price">
-                            <p>$ 000.00</p>
+                            <p>$<%= products.price %></p>
                         </div>
                     </div>
                     <% }) %>
