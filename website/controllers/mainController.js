@@ -7,9 +7,6 @@ const mainC = {
     login: (req,res) => {
         res.render('login');
     },
-    signup: (req,res) => {
-        res.render('signup');
-    }
 };
 
 module.exports = mainC;

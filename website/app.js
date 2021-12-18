@@ -8,9 +8,12 @@ app.use(express.static(path.join(__dirname, './public')));
 /*==================== LLAMA A LOS ARCHIVOS DEL VIEWS ====================*/
 const mR = require('./routes/mainRoutes');
 const pR = require('./routes/productsRoutes');
+const uR = require('./routes/userRoutes');
 
 app.use('/', mR);
 app.use('/products', pR);
+app.use('/users', uR);
+
 
 /*========================================================================*/
 app.set('view engine', 'ejs');

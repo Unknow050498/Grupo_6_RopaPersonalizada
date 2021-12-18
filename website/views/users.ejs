@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cool Cloth</title>
+    <%- include ('partials/head') %>
+</head>
+
+<body>
+    <!--===================================  HEADER ===================================-->
+    <%- include ('partials/navBar') %>
+    <!--===============================================================================-->
+        
+            <div class="container">
+                <h2>Usuarios Registrados</h2>
+                <% usersJSON.forEach((user) => { %>
+                    
+                        <li><%= user.id %> </li>
+                        <li><%= user.foto %> </li>
+                        <li><%= user.nameSignUp %> </li>
+                        <li><%= user.usernameSignUp %> </li>
+                        <li><%= user.emailSignUp %> </li>
+                        <li><%= user.nacimiento %> </li>
+                        <li><%= user.radioSex %> </li>
+                    
+                <% }) %>
+                
+                
+            </div>
+        
+    <!--=================================== FOOTER ===================================-->
+    <%- include ('partials/footer') %>
+    <!--==============================================================================-->
+</body>
+
+</html>
