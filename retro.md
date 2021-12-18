@@ -1,5 +1,6 @@
 # Grupo_6_RopaPersonalizada
 
+## Retro Spring 1-3
 ### Retros buenas
 En el módulo 1 nos pusimos de acuerdo cómo equipo para dividir el trabajo, se delegó una parte del projecto a cada integrante y la comunicacón fue por slack, trabajamos en Trello para ir modificando el avance de las actividades, los wireframes se realizarón en figma colaborativo para tener todos los cambios en línea <br/>
 Las personas que quedamos al final del proyecto nos pudimos organizar para avanzar con los requerimentos y poder tener la entrega lista <br/>
@@ -9,3 +10,11 @@ Las areas de mejora para el equipo sería la comunicación por parte de algunos 
 Asignar tiempos para que la entrega quedará lista antes de tiempo <br/>
 Con menos personas trabajando en el equipo, nos tenemos que organizar mejor y con más tiempo para ir avanzando en los sprints<br/>
 
+## Retro Spring 4 
+### Retros buenas
+El equipo se ha integrado correctamente trabajando durante los springs adecuadamente <br>
+La comunicación ha sido efectiva a traves de slack y en zoom en clase <br>
+
+### Areas de oportunidad
+Administrar mejor el tiempo, ya que al ser sólo dos personas a veces se complica <br>
+Cuidar los detalles para evitar fallos inesperados
