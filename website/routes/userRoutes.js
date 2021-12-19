@@ -13,10 +13,9 @@ var storage = multer.diskStorage({
 
 const userC = require('../controllers/userController');
 
-userR.get('/register', userC.register);
-userR.get('/users', userC.users);
+userR.get('/', userC.users);
 
 var upload = multer({ storage: storage });
-userR.post('/', multer({ storage: storage }).single('fotoUser'), userC.userN);
+userR.post('/users', multer({ storage: storage }).single('foto'), userC.userN);
 
 module.exports = userR;

@@ -5,6 +5,7 @@ const mainC = require('../controllers/mainController');
 
 mainR.get('/', mainC.home);
 mainR.get('/login', mainC.login);
+mainR.get('/register', mainC.register);
 
 
 module.exports = mainR;

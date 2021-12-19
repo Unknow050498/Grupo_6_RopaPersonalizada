@@ -11,10 +11,15 @@ const usersC = {
             usersJSON
         });
     },
-    register: (req, res) => {
-        res.render('signup');
-    },
     userN: (req, res) => {
+        
+        const { body } = req;
+
+        if (body.name === "") {
+          res.send("name vacio")
+          return
+        }
+
         let newU = {
             id: usersJSON[usersJSON.length - 1].id + 1,
             ...req.body,
@@ -23,7 +28,7 @@ const usersC = {
         usersJSON.push(newU);
         fs.writeFileSync(usersFilePath, JSON.stringify(usersJSON, null, ' '));
         res.redirect('/users');
-    },
+    }
 }
 
 module.exports = usersC;
