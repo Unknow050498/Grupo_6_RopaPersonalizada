@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registro - Cool Cloth</title>
+    <%- include ('partials/head') %>
+</head>
+
+<body>
+    <!--===================================  HEADER ===================================-->
+    <%- include ('partials/navBar') %>
+        <!--===============================================================================-->
+
+        <main class="mainProductAdd">
+            
+            <section>
+                <h2 class="subtitulos">Llenar Inventario</h2>
+                <form action="/products/addStock" method="POST" class="formularyProcuctAdd" enctype="multipart/form-data">
+                    <div class="containerFormAdd">
+                        <div class="formProductAdd">
+
+                            <div class="FormProcuctsAdd">
+                                <select name="model" id="" required>
+                                    <option value="" disabled selected>- Seleccione el Modelo - </option>
+                                    <% productos.forEach(modelos => { %>
+                                    <option value="<%= modelos.model_Products %>"><%= modelos.model_Products %></option>
+                                    <% }); %>
+                                </select>
+                            </div>
+                            <div class="ProductAdd">
+                                <label for="color">Color:</label>
+                                <select name="color" style="font-size: 14px; outline: none;">
+                                    <option value="" disabled selected>- Seleccione el color - </option>
+                                    <% colores.forEach(colores => { %>
+                                     <option value="<%= colores.id_Color %>"><%= colores.name_color%></option>
+                                    <% }); %>
+                                </select>
+                                    
+                            </div>
+
+                            <div class="ProductAdd">
+                                <label for="size">Talla:</label>
+                                <select name="size" style="font-size: 14px; outline: none;">
+                                    <option value="" disabled selected>- Seleccione la talla - </option>
+                                    <% tallas.forEach(tallas => { %>
+                                     <option value="<%= tallas.id_Sizes %>"><%= tallas.size%></option>
+                                    <% }); %>
+                                </select>
+                            </div>
+                            <div class="FormProcuctsAdd">
+                                <label for="amount">Cantidad:</label>
+                                <input type="number" name="amount" placeholder="0" minlength="1" required>
+                            </div>
+                        </div>
+                        
+                        <div class="fotosPrductos">
+                            <div class="FotoProdcuto">
+                                <div class="productPicture" id="fotoProducto1"></div>
+                                <input type="file" accept=".jpg, .png, .svg" name='uploadedImageStock'/>>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ProductAddBtnform">
+                        <input type="submit" class="ProductAddBtn" value="Agregar">
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!--=================================== FOOTER ===================================-->
+        <%- include ('partials/footer') %>
+            <!--==============================================================================-->
+</body>
+
+</html>

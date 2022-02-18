@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registro - Cool Cloth</title>
+    <%- include ('partials/head') %>
+</head>
+
+<body>
+    <!--===================================  HEADER ===================================-->
+    <%- include ('partials/navBar') %>
+        <!--===============================================================================-->
+
+        <main class="mainProductAdd">
+            <section>
+                <form action="/products/addProduct" method="POST" class="formularyProcuctAdd" enctype="multipart/form-data">
+                    <div class="containerFormAdd">
+                        <div class="formProductAdd">
+
+                            <div class="FormProcuctsAdd">
+                                <label for="model">Modelo:</label>
+                                <input type="text" name="model" minlength="1" required></input>
+                            </div>
+                            
+                            <div class="ProductAdd">
+                                <label for="type_id">Tipo de prenda:</label>
+                                <select name="type_id" style="font-size: 14px; outline: none;">
+                                    <option value="" disabled selected>- Seleccione un tipo- </option>
+                                    <% tipos.forEach(tipos => { %>
+                                     <option value="<%= tipos.id_type_products %>"><%= tipos.name_type_products%></option>
+                                    <% }); %>
+                                </select>
+                                    
+                            </div>
+                            <div class="FormProcuctsAdd">
+                                <label for="price">Precio:</label>
+                                <input type="number" name="price" placeholder="$" minlength="1" required>
+                            </div>
+                            <div class="FormProcuctsAdd">
+                                <label for="description_short">Descripción corta:</label>
+                                <input type="text" name="description_short" placeholder="Escribe la descripción breve" minlength="5" required></input>
+                            </div>
+                            <div class="FormProcuctsAdd">
+                                <label for="description">Descripción detallada:</label>
+                                <textarea rows="10" cols="50" name="description" placeholder="Escribe una breve descripción del producto" minlength="10" required></textarea>
+                            </div>
+                        </div>
+                        <div class="fotosPrductos">
+                            <div class="FotoProdcuto">
+                                <div class="productPicture" id="fotoProducto1"></div>
+                                <input type="file" name="uploadedImage" id="uploadedImage" accept=".jpg, .png, .svg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ProductAddBtnform">
+                        <input type="submit" class="ProductAddBtn" value="Agregar">
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!--=================================== FOOTER ===================================-->
+        <%- include ('partials/footer') %>
+            <!--==============================================================================-->
+</body>
+
+</html>

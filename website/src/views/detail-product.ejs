@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Producto - Ropa Personalizada</title>
+    <%- include ('partials/head') %>
+</head>
+
+<body>
+    <!--===================================  HEADER ====================================-->
+    <%- include ('partials/navBar') %>
+    <!--================================================================================-->
+
+        <main>
+            <section class="detalles-container">
+                <h4><a href="/">Inicio</a> > <a href="#">Mujer</a> > <%= producto.model_Products %> </h4>
+                <div class="detalles">
+                    <div class="miniaturas">       
+                        <% for(let i=0; i< stock.length; i++){ %>
+                            <% if(stock[i].imgSecu_stock != null ) {%> 
+                                <img src="/img/<%=stock[i].imgSecu_stock%> " class="miniaturas-img" alt="<%=stock[i].imgSecu_stock%>">
+                            <% } %> 
+                        <% } %> 
+                    </div>
+                    <div class="fotoProducto">
+                        
+                        <% const imagen = producto.img_principal%> 
+                        <img src="/img/<%=imagen%>" class="imagenPrincipal" alt="<%=producto.img_principal%>">
+                    </div>
+                    <div class="informacion">
+                        <h1><%= producto.short_description %></h1>
+                        <h2 class="detalle-precio">$<%= producto.price%></h2>
+                        <p><%= producto.description_products %></p>
+                        <h4>TALLA</h4>
+                       
+                        <% for(let j=0; j< stock.length; j++){ %>
+                            <input type="radio" class="radio-tallas" name="talla" id="<%=stock[j].sizes.size %>"></input>
+                            <label for="<%=stock[j].sizes.size %>"><%=stock[j].sizes.size %> </label>
+                      <% } %>      
+                      <% if(stock[0].colors){ %> 
+                       
+                        <h4>COLORES</h4>
+                        <% let color = ""; %> 
+                        
+                        <% for(let j=0; j< stock.length; j++){ %>
+                            <% if(color != stock[j].colors.name_color ) {%> 
+                                <input type="radio" class="radio-tallas" name="colors" id="<%=stock[j].colors.name_color %> "></input>
+                                <label for="<%=stock[j].colors.name_color %> "><%=stock[j].colors.name_color %> </label>
+                                <% color = stock[j].colors.name_color %> 
+                                <% } %> 
+                        <% } %>     
+                    <% } %>                 
+                        <div class="buycar-heart">
+
+                            <button class="btnAddShoppingCart" onclick="window.location.href='#'">Agregar al Carrito</button>
+                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" height="36px"
+                                id="heartProduct" class="svg-inline--fa fa-heart fa-w-16" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 
+                            111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 
+                            37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 
+                            187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 
+                            38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.13 43.5 113.9 7.3 150.8z">
+                                </path>
+                            </svg>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <section>
+            <div class="container">
+                <h2 class="subtitulos">Productos Relacionados</h2>
+               
+            </div>
+        </section>
+
+    <!--=================================== FOOTER ===================================-->
+    <%- include ('partials/footer') %>
+    <!--==============================================================================-->
+</body>
+
+</html>

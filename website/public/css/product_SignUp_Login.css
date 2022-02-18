@@ -20,8 +20,13 @@ h4 a:hover{
 }
 
 .miniaturas{
-    width: 15%;
+    display: flex;
+    flex-direction: column;
+    width: 12%;
     margin-right:2%;
+}
+.miniaturas-img{
+    margin-bottom: 5%;
 }
 .subtitulos{
     text-align: center;

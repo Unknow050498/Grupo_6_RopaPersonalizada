@@ -1,0 +1,8 @@
+const path = require('path');
+//archivo de configuracion de sequelize-cli para micrations
+module.exports = {
+  'config': path.resolve('./src/database/config', 'config.js'),
+  'models-path': path.resolve('./src/database/models'),
+  'seeders-path': path.resolve('./src/database/seeders'),
+  'migrations-path': path.resolve('./src/database/migrations')
+}
