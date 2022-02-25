@@ -107,7 +107,7 @@ nav li{
 
 /*===================== Imagenes e Información =====================*/
 .product{
-    display: flex;
+    
     text-align: center;
     margin: auto 10px;
     background-color: black;
@@ -116,6 +116,7 @@ nav li{
     position: relative;
 }
 .productCoolCloth{
+    min-width: 25%;
     display: block;
     text-align: center;
     margin: auto 10px 20px;

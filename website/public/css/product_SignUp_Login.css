@@ -88,7 +88,23 @@ section .radio-tallas{
     color:#E8AE4A ;
     cursor: pointer;
 }
+/*** USERS ***/
 
+.usuario{
+    display: flex;
+}
+.imagenPerfil {
+    width: 20%;
+
+}
+.imagenPerfil img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.datosUsuarios-li li{
+    text-decoration: none;
+}
 /*========================= MEDIA QUERY PRODUCTO =========================*/
 /* Diseño para Smartpgone */
 @media screen and (max-width:599px){
@@ -154,9 +170,13 @@ section .radio-tallas{
     background-color: rgb(199, 196, 196);
     border-radius: 50%;
 }
-
+.profilePicture img{
+    width: 100%;
+    margin-top: 20%;
+}
 #nacimiento{
     width: 40%;
+
 }
 
 .gender input{
@@ -267,6 +287,14 @@ section .radio-tallas{
         font-size: 15px;
         cursor: pointer;
         margin: auto;
+}
+
+.centrado{
+    display: flex;
+    flex-direction: center;
+}
+.btn-a{
+    color:#E8AE4A;
 }
 /*========================== MEDIA PRODUCTADD ===========================*/
 /* Diseño para Smartphone */

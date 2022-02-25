@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registro Administradores - Cool Cloth</title>
+    <%- include ('partials/head') %>
+</head>
+
+<body>
+    <!--===================================  HEADER ===================================-->
+    <%- include ('partials/navBar') %>
+        <!--===============================================================================-->
+
+        <main class="mainSignUp">
+            <section>
+                <form action="/users/addUser" method="post" class="formularySignUp" enctype="multipart/form-data">
+                    <div class="profile">
+                        <div class="profilePicture"></div>
+                        <input type="file" name="uploadedImageUser" id="uploadedImageUser" accept=".jpg, .png, .svg">
+                    </div>
+
+                    <div class="containerForm">
+                        <div class="formSignUp">
+                            <input type="text" name="nameSignUp" id="nameSignUp" class="nameSignUp"
+                                placeholder="Nombre(s) y Apellido" minlength="4" required>
+
+                            <input type="text" name="usernameSignUp" id="usernameSignUp" placeholder="Nombre de usuario"
+                                minlength="2" require>
+
+                            <input type="email" name="emailSignUp" id="emailSignUp" class="emailSignUp"
+                                placeholder="Correo Electrónico">
+
+                            <input type="password" name="passwordSingUp" id="passwordSignUp" class="passwdSingUp"
+                                placeholder="Contraseña" required>
+                            <input type="password" name="rpasswordSingUp" id="rasswordSignUp" class="passwdSingUp"
+                                placeholder="Confirmar contraseña" required>
+                        </div>
+                        <h4>Fecha de Nacimiento</h4>
+                        <input type="date" name="nacimiento" id="nacimiento" class="nacimiento">
+
+                        <span class="gender">
+                            <h4>Sexo</h4>
+                            <span class="spanMen">
+                                <input type="radio" name="radioSex" id="radioSex" class="radioSexMen" value="0">
+                                <label for="men">Hombre</label>
+                            </span>
+
+                            <span class="spanWomen">
+                                <input type="radio" name="radioSex" id="radioSex" class="radioSexWomen" value="1">
+                                <label for="women">Mujer</label>
+                            </span>
+                        </span>
+                        <input type="text" name="typeSignUp" id="usernameSignUp" placeholder="Cargo"
+                                minlength="2" require>
+                    </div>
+
+                    <div class="signup">
+                        <input type="submit" name="btnSignUp" id="btnSignUp" class="btnSignUp" value="Registrar">
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!--=================================== FOOTER ===================================-->
+        <%- include ('partials/footer') %>
+            <!--==============================================================================-->
+</body>
+
+</html>

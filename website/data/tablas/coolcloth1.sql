@@ -1,0 +1,1 @@
+SELECT * FROM coolcloth1_db.stock;

@@ -19,7 +19,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         sex:{
             type: dataTypes.BOOLEAN,
-        }
+        },
+        imgCli: {
+            type: dataTypes.STRING,
+        },
     };
     let config = {
         tableName: 'clients',

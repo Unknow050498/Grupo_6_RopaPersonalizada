@@ -22,6 +22,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         type_employ: {
             type: dataTypes.STRING,
+        },
+        imgProfile: {
+            type: dataTypes.STRING,
         }
     };
     let config = {

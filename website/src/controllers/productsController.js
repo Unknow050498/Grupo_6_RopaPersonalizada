@@ -122,12 +122,13 @@ const productsC = {
   },
   createProduct: function (req, res) {
     Product.create({
+      img_principal: req.file.filename,
       model_Products: req.body.model,
       type_id: req.body.type_id,
       price: req.body.price,
       description_products: req.body.description,
       short_description: req.body.description_short,
-      img_principal: req.file.filename,
+      
     })
       .then(() => {
         return res.redirect("/products/addStock");

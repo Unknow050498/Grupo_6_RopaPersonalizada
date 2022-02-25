@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cool Cloth</title>
+    <%- include ('partials/head') %>
+  </head>
+
+  <body>
+    <!--===================================  HEADER ===================================-->
+    <%- include ('partials/navBar') %>
+    <!--===============================================================================-->
+
+    <div class="container">
+        <h2><%=cliente.name%></h2>
+      <section>
+        <div class="usuario">
+          <% if(cliente.imgCli != null){ %>
+          <div class="imagenPerfil">
+            <img
+              src="/img/clients/<%=cliente.imgCli%>"
+              alt="<%=cliente.imgCli%>"
+            />
+          </div>
+          <%} else{ %>
+          <div class="imagenPerfil">
+            <img src="/img/clients/avatar.png" alt="avatar general" />
+          </div>
+
+          <% } %>
+          <div class="datosclientes">
+            <ul class="datosclientes-li">
+              <li>cliente: <%= cliente.username %> </li>
+              <li>E-mail: <%= cliente.email %></li>
+              <li>Fecha de nacimiento:<%= cliente.dateborn %></li>
+
+              <% if(cliente.sex){%>
+              <li>Género: Mujer</li>
+              <% }else{ %>
+              <li>Género: Hombre</li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+        <div class="btn">
+            <a class="btn-a" href="/clients/edit/<%= cliente.username %>">Modificar cliente</a>
+        </div>
+        <form action="/clients/delete/<%=cliente.username%>?_method=DELETE" method="post" class="formularySignUp" enctype="multipart/form-data">
+            <button type="submit" name="btnSignUp" id="btnSignUp" class="btnSignUp">Eliminar cliente</button>
+        </form>
+      </section>
+    </div>
+
+    <!--=================================== FOOTER ===================================-->
+    <%- include ('partials/footer') %>
+    <!--==============================================================================-->
+  </body>
+</html>

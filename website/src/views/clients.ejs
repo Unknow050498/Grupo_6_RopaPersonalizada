@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cool Cloth</title>
+    <%- include ('partials/head') %>
+  </head>
+
+  <body>
+    <!--===================================  HEADER ===================================-->
+    <%- include ('partials/navBar') %>
+    <!--===============================================================================-->
+
+    <div class="container">
+      <h2>Clientes Registrados</h2>
+      <section>
+        <% for( let i = 0; i < clientes.length; i++ ) { %>
+        <div class="usuario">
+          <% if(clientes[i].imgCli != null){ %> 
+          <div class="imagenPerfil">
+            <img
+              src="/img/clients/<%=clientes[i].imgCli%>"
+              alt="<%=clientes[i].imgCli%>"
+            />
+          </div>
+          <%} else{ %>
+          <div class="imagenPerfil">
+            <img src="/img/clients/avatar.png" alt="avatar general" />
+          </div>
+
+          <% } %>
+          <div class="datosUsuarios">
+            <ul class="datosUsuarios-li">
+              <li>
+                <a href="/clients/detailsCli/<%= clientes[i].username %>">
+                  <h2><%= clientes[i].username %></h2>
+                </a>
+              </li>
+              <li>Nombre: <%= clientes[i].name %></li>
+              <li>E-mail: <%= clientes[i].email %></li>
+              <li>Fecha de nacimiento:<%= clientes[i].dateborn %></li>
+
+              <% if(clientes[i].sex){%>
+              <li>Género: Mujer</li>
+              <% }else{ %>
+              <li>Género: Hombre</li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+        <% } %>
+      </section>
+    </div>
+
+    <!--=================================== FOOTER ===================================-->
+    <%- include ('partials/footer') %>
+    <!--==============================================================================-->
+  </body>
+</html>

@@ -13,45 +13,45 @@
 
         <main class="mainSignUp">
             <section>
-                <form action="" method="post" class="formularySignUp" enctype="multipart/form-data">
+                <form action="/clients/addCli" method="post" class="formularySignUp" enctype="multipart/form-data">
                     <div class="profile">
                         <div class="profilePicture"></div>
-                        <input type="file" name="foto" id="foto" accept=".jpg, .png, .svg">
+                        <input type="file" name="uploadedImageCli" id="uploadedImageCli" accept=".jpg, .png, .svg">
                     </div>
 
                     <div class="containerForm">
                         <div class="formSignUp">
-                            <input type="text" name="nameSignUp" id="nameSignUp" class="nameSignUp"
+                            <input type="text" name="nameSignUpCli" id="nameSignUpCli" class="nameSignUp"
                                 placeholder="Nombre(s) y Apellido" minlength="4" required>
 
-                            <input type="text" name="usernameSignUp" id="usernameSignUp" placeholder="Nombre de usuario"
+                            <input type="text" name="ClinameSignUpCli" id="ClinameSignUpCli" placeholder="Nombre de usuario"
                                 minlength="2" require>
 
-                            <input type="email" name="emailSignUp" id="emailSignUp" class="emailSignUp"
+                            <input type="email" name="emailSignUpCli" id="emailSignUpCli" class="emailSignUp"
                                 placeholder="Correo Electrónico">
 
-                            <input type="password" name="passwordSingUp" id="passwordSignUp" class="passwdSingUp"
+                            <input type="password" name="passwordSingUpCli" id="passwordSignUpCli" class="passwdSingUp"
                                 placeholder="Contraseña" required>
-                            <input type="password" name="rpasswordSingUp" id="rasswordSignUp" class="passwdSingUp"
+                            <input type="password" name="rpasswordSingUpCli" id="rasswordSignUpCli" class="passwdSingUp"
                                 placeholder="Confirmar contraseña" required>
                         </div>
                         <h4>Fecha de Nacimiento</h4>
-                        <input type="date" name="nacimiento" id="nacimiento" class="nacimiento">
+                        <input type="date" name="nacimientoCli" id="nacimientoCli" class="nacimiento">
 
                         <span class="gender">
                             <h4>Sexo</h4>
                             <span class="spanMen">
-                                <input type="radio" name="radioSex" id="radioSex" class="radioSexMen">
+                                <input type="radio" name="radioSexCli" id="radioSexCli" class="radioSexMen" value="0">
                                 <label for="men">Hombre</label>
                             </span>
 
                             <span class="spanWomen">
-                                <input type="radio" name="radioSex" id="radioSex" class="radioSexWomen">
+                                <input type="radio" name="radioSexCli" id="radioSexCli" class="radioSexWomen" value="1">
                                 <label for="women">Mujer</label>
                             </span>
                         </span>
                         <div class="termsConditions">
-                            <input type="checkbox" name="terms_conditions" id="terms-conditions" required><label>Aceptas
+                            <input type="checkbox" name="terms_conditionsCli" id="terms-conditionsCli" required><label>Aceptas
                                 nuestras Condiciones, la Política de datos y la Política de cookies.</label>
                         </div>
                     </div>

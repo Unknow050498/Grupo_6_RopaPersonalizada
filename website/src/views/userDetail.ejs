@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cool Cloth</title>
+    <%- include ('partials/head') %>
+  </head>
+
+  <body>
+    <!--===================================  HEADER ===================================-->
+    <%- include ('partials/navBar') %>
+    <!--===============================================================================-->
+
+    <div class="container">
+        <h2><%= usuario.name_e %></h2>
+      <section>
+        <div class="usuario">
+          <% if(usuario.imgProfile != null){ %>
+          <div class="imagenPerfil">
+            <img
+              src="/img/users/<%=usuario.imgProfile%>"
+              alt="<%=usuario.imgProfile%>"
+            />
+          </div>
+          <%} else{ %>
+          <div class="imagenPerfil">
+            <img src="/img/users/avatar.png" alt="avatar general" />
+          </div>
+
+          <% } %>
+          <div class="datosUsuarios">
+            <ul class="datosUsuarios-li">
+              <li>Usuario: <%= usuario.user_employ %> </li>
+              <li>E-mail: <%= usuario.email_e %></li>
+              <li>Fecha de nacimiento:<%= usuario.dateborn_e %></li>
+
+              <% if(usuario.sex_e){%>
+              <li>Género: Mujer</li>
+              <% }else{ %>
+              <li>Género: Hombre</li>
+              <% } %>
+              <li>Cargo: <%= usuario.type_employ %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn">
+            <a class="btn-a" href="/users/edit/<%= usuario.user_employ %>">Modificar usuario</a>
+        </div>
+        <form action="/users/delete/<%=usuario.user_employ%>?_method=DELETE" method="post" class="formularySignUp" enctype="multipart/form-data">
+            <button type="submit" name="btnSignUp" id="btnSignUp" class="btnSignUp">Eliminar usuario</button>
+        </form>
+      </section>
+    </div>
+
+    <!--=================================== FOOTER ===================================-->
+    <%- include ('partials/footer') %>
+    <!--==============================================================================-->
+  </body>
+</html>
