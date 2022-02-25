@@ -95,7 +95,6 @@ nav li{
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
-    
 }
 .product-info a{
     color: white;
@@ -108,7 +107,7 @@ nav li{
 
 /*===================== Imagenes e Información =====================*/
 .product{
-    display: block;
+    display: flex;
     text-align: center;
     margin: auto 10px;
     background-color: black;
@@ -125,6 +124,14 @@ nav li{
     box-shadow: 3px 3px 4px rgb(0, 0, 0, 0.5);
     position: relative;
 }
+h2{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Corazon favorito del ptroducto */
 .heart{
     color:rgb(195, 197, 198);
@@ -135,7 +142,6 @@ nav li{
 }
 .heart:hover{
    color: #E8AE4A;
-   
    transform: rotate(360deg);
    transition: 1090ms, transform 1s;
 }
@@ -148,7 +154,7 @@ nav li{
 }
 .imagen img{
     height: 300px;
-    width: 100%;  
+    width: 100%;
 }
 .price{
     background-color: #E8AE4A;
@@ -357,6 +363,9 @@ footer{
     .burguer-menu, .userMobile, .shoppingCartMobile{
         display: none;
     }
+    .productCoolCloth{
+       min-width: 40%;
+    }
 }
 
 @media screen and (min-width:1024px){   
@@ -371,5 +380,8 @@ footer{
 
     .burguer-menu, .userMobile, .shoppingCartMobile{
         display: none;
+    }
+    .productCoolCloth{
+        width: 22%;
     }
 }
