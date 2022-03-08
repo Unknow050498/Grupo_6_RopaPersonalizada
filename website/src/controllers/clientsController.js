@@ -3,6 +3,7 @@ const path = require("path");
 const { fileURLToPath } = require("url");
 const db = require("../database/models");
 const sequelize = db.sequelize;
+const bcryptjs = require('bcryptjs');
 
 //const ClientsFilePath = path.join(__dirname, '../data/ClientsDataBase.json');
 //let ClientsJSON = JSON.parse(fs.readFileSync(ClientsFilePath, 'utf-8'));
@@ -23,12 +24,13 @@ const ClientsC = {
     res.render("signup.ejs");
   },
   createCli: function (req, res) {
+    let passhash = bcryptjs.hashSync(req.body.passwordSingUpCli, 10);
     if (req.file) {
       Client.create({
         username: req.body.ClinameSignUpCli,
         name: req.body.nameSignUpCli,
         email: req.body.emailSignUpCli,
-        password: req.body.passwordSingUpCli,
+        password: passhash,
         dateborn: req.body.nacimientoCli,
         sex:req.body.radioSexCli,
         imgCli: req.file.filename,

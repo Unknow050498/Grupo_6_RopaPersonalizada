@@ -14,10 +14,6 @@
         <main class="mainSignUp">
             <section>
                 <form action="/users/addUser" method="post" class="formularySignUp" enctype="multipart/form-data">
-                    <div class="profile">
-                        <div class="profilePicture"></div>
-                        <input type="file" name="uploadedImageUser" id="uploadedImageUser" accept=".jpg, .png, .svg">
-                    </div>
 
                     <div class="containerForm">
                         <div class="formSignUp">
@@ -50,8 +46,11 @@
                                 <label for="women">Mujer</label>
                             </span>
                         </span>
-                        <input type="text" name="typeSignUp" id="usernameSignUp" placeholder="Cargo"
-                                minlength="2" require>
+                        <input type="text" name="typeSignUp" id="usernameSignUp" placeholder="Cargo" minlength="2"
+                            require>
+                        <div class="profile">
+                            <input type="file" name="uploadedImageCli" id="uploadedImageCli" accept=".jpg, .png, .svg">
+                        </div>
                     </div>
 
                     <div class="signup">

@@ -53,6 +53,7 @@ nav {
 nav .menu {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 /* NAV LI */
 nav li{
@@ -66,7 +67,44 @@ nav li{
 .menu a:hover{
     color: #E8AE4A;
 }
-
+.menu .login img{
+    width: 20px;
+    border-radius: 50%;
+}
+.submenu-li {
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+    margin:-5px 40px -5px 0;
+ }
+    
+#menu ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    padding:10px 0;
+    z-index: 1003;
+    background-color: black;
+}
+    
+#menu ul ul li {
+    float:none;
+    width:200px;
+    height: 50px;
+    list-style: none;
+    padding-top: 15px;
+}
+    
+#menu ul ul a {
+    line-height:120%;
+    padding:15px 15px;
+}
+    
+#menu ul li:hover > ul {
+    display:block;
+}
 .favorite{
     margin-left: auto;
 }
@@ -277,7 +315,9 @@ footer{
     transform: rotate(360deg);
     transition: 1090ms, transform 1s;
 }
-
+.align-der{
+    text-align: right;
+}
 /*============================== MEDIA QUERY ==============================*/
 @media screen and (max-width:599px){
     header .logo_barraBusqueda{

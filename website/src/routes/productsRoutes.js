@@ -3,6 +3,8 @@ const productsR = express.Router();
 const multer = require('multer');
 const path = require('path');
 const app = require('../app');
+const permisionMiddle = require('../middleware/permisionMiddle');
+
 
 const productsC = require('../controllers/productsController');
 
@@ -22,9 +24,9 @@ const upload = multer({storage});
 
 productsR.get('/products', productsC.list);
 productsR.get('/products/detailsP/:model', productsC.detailsP);
-productsR.get('/products/addStock', productsC.addStock);
+productsR.get('/products/addStock', permisionMiddle, productsC.addStock);
 productsR.post('/products/addStock', upload.single('uploadedImageStock'), productsC.createStock);
-productsR.get('/products/addProduct', productsC.addProduct);
+productsR.get('/products/addProduct', permisionMiddle, productsC.addProduct);
 productsR.post('/products/addProduct', upload.single('uploadedImage'), productsC.createProduct);
 
 module.exports = productsR;

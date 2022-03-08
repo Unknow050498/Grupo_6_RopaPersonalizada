@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const userLoggedMiddle = require('./middleware/userLoggedMiddle');
+const cookies = require('cookie-parser');
 
 /*==================== LLAMA A LOS ARCHIVOS DEL VIEWS ====================*/
 const mainRoutes = require('./routes/mainRoutes');
@@ -21,6 +24,15 @@ app.use(express.urlencoded({ extended: false }));
 
 //Aquí estoy disponiendo la posibilidad para utilizar el seteo en los formularios para el usod e los metodos put ó delete
 app.use(methodOverride('_method'));
+
+app.use(session({
+    secret:'sesion',
+    resave: false,
+    saveUninitialized: false,
+}));
+app.use(userLoggedMiddle);
+
+app.use(cookies());
 
 app.use('/', mainRoutes);
 app.use(productRoutes);

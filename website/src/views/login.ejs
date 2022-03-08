@@ -13,12 +13,24 @@
 
         <main class="mainLogin">
             <section>
-                <form action="" method="post" class="formularyLogin">
+               <!-- <div class="textSignup align-der">
+                    <h4>Si deseas ingresar como empleado da clic <a href="register">Aquí</a></h4>
+                </div>-->
+                <form action="/login" method="post" class="formularyLogin">
                     <div class="containerFormLogin">
+                        <% if (locals.errors && errors.userName) { %>
+                            <p class="is-dangeros">  <%= errors.userName.msg %> </p>
+                         <% } %>  
                         <input type="text" name="usernameLogin" id="usernameLogin" class="usernameLogin"
                             placeholder="Nombre de usuario" required>
+                            <% if (locals.errors && errors.passUser) { %>
+                                <p class="is-dangeros">  <%= errors.passUser.msg %> </p>
+                             <% } %>  
                         <input type="password" name="passwordLogin" id="passwordLogin" class="passwordLogin"
                             placeholder="Contraseña" required>
+                    </div>
+                    <div class="termsConditions">
+                        <input type="checkbox" name="soyEmpleado" id="soyEmpleado" ><label>Ingresar como empleado</label>
                     </div>
                     <div class="textSignup">
                         <h4>¿Aun no tienes una cuenta? <a href="register">Registrate</a></h4>

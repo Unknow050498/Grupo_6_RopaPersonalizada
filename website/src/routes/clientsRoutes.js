@@ -3,6 +3,8 @@ const clientsR = express.Router();
 const multer = require('multer');
 const path = require('path');
 const app = require('../app');
+const permisionMiddle = require('../middleware/permisionMiddle');
+
 
 const clientsC = require('../controllers/clientsController');
 
@@ -21,9 +23,9 @@ const upload = multer({storage});
 
 clientsR.get('/clients', clientsC.list);
 clientsR.get('/clients/detailsCli/:userName', clientsC.detailsCli);
-clientsR.get('/clients/addCli', clientsC.addCli);
+clientsR.get('/clients/addCli', permisionMiddle, clientsC.addCli);
 clientsR.post('/clients/addCli', upload.single('uploadedImageCli'), clientsC.createCli);
-clientsR.get('/clients/edit/:userName', clientsC.editCli);
+clientsR.get('/clients/edit/:userName', permisionMiddle, clientsC.editCli);
 clientsR.put('/clients/edit/:userName', upload.single('uploadedImageCliEdit'), clientsC.updateCli);
 clientsR.delete('/clients/delete/:userName', clientsC.destroy);
 

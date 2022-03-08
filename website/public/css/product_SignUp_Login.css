@@ -105,6 +105,10 @@ section .radio-tallas{
 .datosUsuarios-li li{
     text-decoration: none;
 }
+
+.is-dangeros{
+    color: red;
+}
 /*========================= MEDIA QUERY PRODUCTO =========================*/
 /* Diseño para Smartpgone */
 @media screen and (max-width:599px){
@@ -165,8 +169,6 @@ section .radio-tallas{
 
 .profilePicture{
     margin: -20px auto 20px auto;
-    width: 60%;
-    height: 150px;
     background-color: rgb(199, 196, 196);
     border-radius: 50%;
 }
@@ -174,9 +176,18 @@ section .radio-tallas{
     width: 100%;
     margin-top: 20%;
 }
+.profile{
+    border: 4px double #E8AE4A;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+    margin-top: 10%;
+    margin-left: -30px;
+    margin-bottom: 5%;
+}
 #nacimiento{
     width: 40%;
-
 }
 
 .gender input{
@@ -200,6 +211,7 @@ section .radio-tallas{
 .termsConditions{
     display: flex;
     margin: 20px auto 30px;
+    color: gray;
 }
 .termsConditions input{
     width: auto;

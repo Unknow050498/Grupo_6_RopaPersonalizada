@@ -14,11 +14,7 @@
         <main class="mainSignUp">
             <section>
                 <form action="/clients/addCli" method="post" class="formularySignUp" enctype="multipart/form-data">
-                    <div class="profile">
-                        <div class="profilePicture"></div>
-                        <input type="file" name="uploadedImageCli" id="uploadedImageCli" accept=".jpg, .png, .svg">
-                    </div>
-
+ 
                     <div class="containerForm">
                         <div class="formSignUp">
                             <input type="text" name="nameSignUpCli" id="nameSignUpCli" class="nameSignUp"
@@ -50,6 +46,9 @@
                                 <label for="women">Mujer</label>
                             </span>
                         </span>
+                        <div class="profile">
+                            <input type="file" name="uploadedImageCli" id="uploadedImageCli" accept=".jpg, .png, .svg">
+                        </div>
                         <div class="termsConditions">
                             <input type="checkbox" name="terms_conditionsCli" id="terms-conditionsCli" required><label>Aceptas
                                 nuestras Condiciones, la Política de datos y la Política de cookies.</label>
