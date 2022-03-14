@@ -9,6 +9,19 @@ const {body} = require('express-validator');
 
 const usersC = require('../controllers/userController');
 
+//Validaciones
+const validaCreateForm =[
+    body('nameSignUp').notEmpty().withMessage('El campo de nombre no puede estar vacio'),
+    body('nameSignUp').isLength({ min: 5 }).withMessage('El nombre completo debe ser de más de 5 caracteres'),
+    body('usernameSignUp').notEmpty().withMessage('El campo de nombre no puede estar vacio'),
+    body('usernameSignUp').isLength({ min: 3 }).withMessage('El nombre de usuario debe ser más de 3 caracteres'),    
+    body('emailSignUp').isEmail().withMessage('El email debe ser un formato valido'),
+    body('passwordSingUp').notEmpty().withMessage('El campo de contraseña no puede estar vacio'),
+    body('nacimiento').notEmpty().withMessage('Porfavor coloca un fecha'),
+    body('radioSex').notEmpty().withMessage('Elige un genero'),
+    body('typeSignUp').notEmpty().withMessage('Asigna un cargo'),
+];
+
 // Imagenes
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -21,20 +34,9 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage});
 
-//Validaciones
-const validaCreateForm =[
-    body('nameSignUp').notEmpty().withMessage('El campo de nombre no puede estar vacio'),
-    body('usernameSignUp').notEmpty().withMessage('El campo de nombre no puede estar vacio'),
-    body('emailSignUp').isEmail().withMessage('El email debe ser un formato valido'),
-    body('password').isEmpty().withMessage('El campo de contraseña no puede estar vacio'),
-    body('nacimiento').isEmpty().withMessage('Porfavor coloca un fecha'),
-    body('radioSex').isEmpty().withMessage('Elige un genero'),
-    body('typeSignUp').isEmpty().withMessage('Asigna un cargo'),
-];
-
-usersR.get('/users', usersC.list);
-usersR.get('/users/detailsU/:userName', usersC.detailsU);
-usersR.get('/users/addUser', usersC.addUser);
+usersR.get('/users',permisionMiddle, usersC.list);
+usersR.get('/users/detailsU/:userName', permisionMiddle, usersC.detailsU);
+usersR.get('/users/addUser', permisionMiddle, usersC.addUser);
 usersR.post('/users/addUser', upload.single('uploadedImageUser'), validaCreateForm, usersC.createUser);
 usersR.get('/users/edit/:userName', permisionMiddle, usersC.editU);
 usersR.put('/users/edit/:userName', upload.single('uploadedImageUserEdit'), usersC.updateU);

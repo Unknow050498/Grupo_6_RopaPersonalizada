@@ -25,29 +25,80 @@ const usersC = {
     res.render("signupAdmin.ejs");
   },
   createUser: function (req, res) {
-    let passhash = bcryptjs.hashSync(req.body.passwordSingUp, 10);
+
     let errors = validationResult(req);
+    const user = req.body.usernameLogin;
+    const emailUser = req.body.emailSignUp;
     if (errors.isEmpty()) {
-      if (req.file) {
-        User.create({
-          user_employ: req.body.usernameSignUp,
-          name_e: req.body.nameSignUp,
-          email_e: req.body.emailSignUp,
-          password_e: passhash,
-          dateborn_e: req.body.nacimiento,
-          sex_e: req.body.radioSex,
-          type_employ: req.body.typeSignUp,
-          imgProfile: req.file.filename,
-        })
-          .then(function () {
-            return res.redirect("/users");
-          })
-          .catch((e) => res.send(e));
-      }
-    }else{
-     res.render("signupAdmin.ejs", {errors:errors.array()});
-     console.log(errors.array());
-     //res.send(errors);
+      const BuscaUserEmploy = User.findByPk(user);
+      const BuscaEmailEmploy = User.findAll({
+        where: {
+          email_e: emailUser
+        }
+      });
+      Promise.all([BuscaUserEmploy, BuscaEmailEmploy])
+        .then((function ([user1, emailUser1]) {
+          console.log(`usaurio: ${user}`);
+          console.log(`email: ${emailUser}`);
+          if (user1 != user) {
+            if (emailUser1 != emailUser ) {
+              let passhash = bcryptjs.hashSync(req.body.passwordSingUp, 10);
+              if (req.file) {
+                User.create({
+                  user_employ: req.body.usernameSignUp,
+                  name_e: req.body.nameSignUp,
+                  email_e: req.body.emailSignUp,
+                  password_e: passhash,
+                  dateborn_e: req.body.nacimiento,
+                  sex_e: req.body.radioSex,
+                  type_employ: req.body.typeSignUp,
+                  imgProfile: req.file.filename,
+                })
+                  .then(function () {
+                    return res.redirect("/users");
+                  })
+                  .catch((e) => res.send(e));
+              } else {
+                User.create({
+                  user_employ: req.body.usernameSignUp,
+                  name_e: req.body.nameSignUp,
+                  email_e: req.body.emailSignUp,
+                  password_e: passhash,
+                  dateborn_e: req.body.nacimiento,
+                  sex_e: req.body.radioSex,
+                  type_employ: req.body.typeSignUp,
+                  imgProfile: "avatar.png",
+                })
+                  .then(function () {
+                    return res.redirect("/users");
+                  })
+                  .catch((e) => res.send(e));
+              }
+            } else {
+              console.log("Email registrado previamente");
+              return res.render('signupAdmin', {
+                errorsUser: {
+                  mailUser: {
+                    msg: 'Email registrado previamente'
+                  }
+                }
+              })
+            }
+          } else {
+            console.log("Nombre de usuario registrado previamente");
+            return res.render('signupAdmin', {
+              errorsUser: {
+                nickUser: {
+                  msg: 'Nombre de usuario registrado previamente'
+                }
+              }
+            })
+          }
+        }))
+    } else {
+      res.render("signupAdmin.ejs", { errors: errors.array(), old: req.body });
+      console.log(errors.array());
+      //res.send(errors);
     }
   },
   detailsU: (req, res) => {

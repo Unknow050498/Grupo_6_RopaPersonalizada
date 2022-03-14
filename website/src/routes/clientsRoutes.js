@@ -21,8 +21,8 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 
-clientsR.get('/clients', clientsC.list);
-clientsR.get('/clients/detailsCli/:userName', clientsC.detailsCli);
+clientsR.get('/clients',permisionMiddle,  clientsC.list);
+clientsR.get('/clients/detailsCli/:userName', permisionMiddle, clientsC.detailsCli);
 clientsR.get('/clients/addCli', permisionMiddle, clientsC.addCli);
 clientsR.post('/clients/addCli', upload.single('uploadedImageCli'), clientsC.createCli);
 clientsR.get('/clients/edit/:userName', permisionMiddle, clientsC.editCli);

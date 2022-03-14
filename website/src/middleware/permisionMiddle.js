@@ -1,8 +1,8 @@
 function permisionMiddle(req, res, next){
-    if(res.locals.userLogged.type_employ == null){
+    console.log(res.locals.isAdmin);
+    if(res.locals.isAdmin == false){
         return res.redirect('/login');
     }
-    
     next();
 }
 
