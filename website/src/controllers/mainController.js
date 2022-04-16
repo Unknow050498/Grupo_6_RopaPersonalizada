@@ -15,7 +15,6 @@ const Employs = db.User;
 
 const mainC = {
     home: (req, res) => {
-      console.log(req.session.userLogged )
         const obtenerProducts = Product.findAll({
           include: [{ association: "stock" }, { association: "type_products" }],
         });
@@ -39,6 +38,8 @@ const mainC = {
         res.render('login');
     },
     logout: (req,res) => {
+      res.clearCookie('adminRegister');
+      res.clearCookie('clientRegister');
       req.session.destroy();
       return res.redirect('/');
     },
@@ -48,15 +49,13 @@ const mainC = {
         Employs.findByPk(user)
       .then((employ)=>{
         if(employ){
-          console.log(employ);
           let okPassE = bcryptjs.compareSync(req.body.passwordLogin,employ.password_e);
           if(okPassE){
-            console.log("todo ok")
             delete employ.password_e;
             req.session.userLogged = employ;
+            res.cookie('adminRegister', req.body.usernameLogin, {maxAge: (1000 *60)*10})
             return res.redirect("/")
           }else{
-            console.log("Contraseña erronea")
             return res.render('login',{
               errors: {
                 passUser: {
@@ -67,7 +66,6 @@ const mainC = {
           }
         
         }else{
-          console.log("no hay usuario");
           return res.render('login',{
             errors: {
               userName: {
@@ -81,15 +79,13 @@ const mainC = {
       Clients.findByPk(user)
       .then((cliente)=>{
         if(cliente){
-          console.log(cliente);
           let okPass = bcryptjs.compareSync(req.body.passwordLogin,cliente.password);
           if(okPass){
-            console.log("todo ok")
             delete cliente.password;
             req.session.userLogged = cliente;
+            res.cookie('clientRegister', req.body.usernameLogin, {maxAge: (1000 *60)*10})
             return res.redirect("/")
           }else{
-            console.log("Contraseña erronea")
             return res.render('login',{
               errors: {
                 passUser: {
@@ -100,7 +96,6 @@ const mainC = {
           }
         
         }else{
-          console.log("no hay cliente");
           return res.render('login',{
             errors: {
               userName: {

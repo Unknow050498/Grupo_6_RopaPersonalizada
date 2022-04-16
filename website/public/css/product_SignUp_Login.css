@@ -1,464 +1,496 @@
 /*============================== PRODUCTO.HTML ==============================*/
-.detalles{
-    display: flex;
-    justify-content: center;
+.detalles {
+  display: flex;
+  justify-content: center;
 }
-.detalles-container{
- margin: auto;
- max-width: 1200px;
+.detalles-container {
+  margin: auto;
+  max-width: 1200px;
 }
 .detalles-container h4 {
-    color: gray;
+  color: gray;
 }
-.detalles-container h4 a{
-    text-decoration: none;
-    color: gray;
-    text-transform: uppercase;
+.detalles-container h4 a {
+  text-decoration: none;
+  color: gray;
+  text-transform: uppercase;
 }
-h4 a:hover{
-    color: #E8AE4A;
+h4 a:hover {
+  color: #e8ae4a;
 }
-
-.miniaturas{
-    display: flex;
-    flex-direction: column;
-    width: 12%;
-    margin-right:2%;
+.nacimiento-txt {
+  margin-top: 0;
 }
-.miniaturas-img{
-    margin-bottom: 5%;
+.Part-2 {
+  width: 40%;
 }
-.subtitulos{
-    text-align: center;
+.miniaturas {
+  display: flex;
+  flex-direction: column;
+  width: 12%;
+  margin-right: 2%;
+}
+.miniaturas-img {
+  margin-bottom: 5%;
+}
+.subtitulos {
+  text-align: center;
 }
 
 /*========================== Foto del producto principal ===========================*/
-.fotoProducto{
-    width: 40%;
-    margin-right:2%;
+.fotoProducto {
+  width: 40%;
+  margin-right: 2%;
 }
-.imagenPrincipal{
-    width: 100%;
+.imagenPrincipal {
+  width: 100%;
 }
 
 /*========================== Información del producto ===========================*/
-.informacion{
-    width: 25%;
+.informacion {
+  width: 25%;
 }
 
 /*========================== Botones de tallas ===========================*/
-section .radio-tallas{
-    background-color: rgb(240, 25, 25);
-    border: 1px solid black;
-    padding: auto;
-    margin: 10px;
+section .radio-tallas {
+  background-color: rgb(240, 25, 25);
+  border: 1px solid black;
+  padding: auto;
+  margin: 10px;
 }
 
-.radio-tallas label{
-    color: rgb(216, 29, 29);
-    display: inline-block;
-    cursor:pointer;
-    padding: 5px 20px;
+.radio-tallas label {
+  color: rgb(216, 29, 29);
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px 20px;
 }
-
 
 /*========================== Boton Agregar al Carrito y Corazón ===========================*/
-.btnAddShoppingCart{
-    background-color:#E8AE4A;
-    border-radius: 5px;
-    height: 50px;
-    width: 80%;
-    color: white;
-    border: none;
-    cursor: pointer;
-    opacity: 1;
-    font-size: 17px;
+.btnAddShoppingCart {
+  background-color: #e8ae4a;
+  border-radius: 5px;
+  height: 50px;
+  width: 80%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  font-size: 17px;
 }
-.btnAddShoppingCart:hover{
-    opacity: 0.8;
+.btnAddShoppingCart:hover {
+  opacity: 0.8;
 }
-.buycar-heart{
-    display: flex;
+.buycar-heart {
+  display: flex;
 }
-.buycar-heart svg{
-    margin-top: 6px;
-    margin-left: 10px;
+.buycar-heart svg {
+  margin-top: 6px;
+  margin-left: 10px;
 }
-.fa-heart:hover{
-    color:#E8AE4A ;
-    cursor: pointer;
+.fa-heart:hover {
+  color: #e8ae4a;
+  cursor: pointer;
 }
 /*** USERS ***/
-
-.usuario{
-    display: flex;
+.usuario {
+  background-color: #efefef;
+  padding: 2%;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  display: flex;
 }
-.imagenPerfil {
-    width: 20%;
 
+.imagenPerfil {
+  width: 170px;
 }
 .imagenPerfil img {
-    width: 100%;
-    border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
-.datosUsuarios-li li{
-    text-decoration: none;
+.usuarios-tabla {
+  margin: auto;
+  width: 80%;
 }
-
-.is-dangeros{
-    color: red;
+.datosUsuarios-li {
+  list-style: none;
+}
+.datosUsuarios-li a {
+  text-decoration: none;
+  color: #e8ae4a;
+}
+.cuadro-errores {
+  background-color: #f3d9d9;
+  border-radius: 10px;
+}
+.is-dangeros {
+  color: red;
+}
+.formSignUp {
+  width: 40%;
 }
 /*========================= MEDIA QUERY PRODUCTO =========================*/
 /* Diseño para Smartpgone */
-@media screen and (max-width:599px){
-    section .detalles{
-        display: block;
-    }
-    .miniaturas{
-        display: none;
-    }
-    section .fotoProducto{
-        width: 100%;
-        margin-top: 15%;
-    }
-    section h1{
-        position: absolute;
-        top: 23%;
-    }
-    section .informacion{
-        margin: 50px auto;
-        width: 100%;
-    }
-    section div .btnAddShoppingCart{
-        font-size: 20px;
-    }
-
+@media screen and (max-width: 599px) {
+  section .detalles {
+    display: block;
+  }
+  .miniaturas {
+    display: none;
+  }
+  section .fotoProducto {
+    width: 100%;
+    margin-top: 15%;
+  }
+  section h1 {
+    position: absolute;
+    top: 23%;
+  }
+  section .informacion {
+    margin: 50px auto;
+    width: 100%;
+  }
+  section div .btnAddShoppingCart {
+    font-size: 20px;
+  }
+  .Part-2 {
+    width: 90%;
+  }
 }
 
- /* Diseño para Tablet */
-@media screen and (min-width:600px) and (max-width:1023px){
-       
+/* Diseño para Tablet */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .Part-2 {
+    width: 90%;
+  }
 }
 /*===========================================================================*/
 
 /*========================== SIGNUP FORM ===========================*/
-.mainSignUp{
-    margin-bottom: -90px;
+.mainSignUp {
+  margin-bottom: -90px;
 }
 
-.formularySignUp{
-    width: 30%;
-    margin: auto;
-    padding: 5%;
+.formularySignUp {
+  width: 90%;
+  margin: auto;
+  padding: 5%;
 }
 
-.formularySignUp input{
-    margin-bottom: 20px;
-    font-size: 14px;
-    outline: none;
+.formularySignUp input {
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: none;
+}
+.containerForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.containerForm input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #e8ae4a;
+  border-radius: 5px;
+  text-indent: 7px;
 }
 
-.containerForm input{
-    display: block;
-    width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    text-indent: 7px;
+.profilePicture {
+  background-color: rgb(199, 196, 196);
+  border-radius: 50%;
+}
+.profilePicture img {
+  width: 100%;
+}
+.profile {
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
+  width: 300px;
+  height: 50px;
+}
+#nacimiento {
+  width: 100%;
 }
 
-.profilePicture{
-    margin: -20px auto 20px auto;
-    background-color: rgb(199, 196, 196);
-    border-radius: 50%;
+.gender input {
+  width: auto;
+  display: inline;
+  height: auto;
+  margin-bottom: 20px;
 }
-.profilePicture img{
-    width: 100%;
-    margin-top: 20%;
+.spanMen {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
 }
-.profile{
-    border: 4px double #E8AE4A;
-    border-radius: 10px;
-    padding: 10px;
-    width: 300px;
-    height: 50px;
-    margin-top: 10%;
-    margin-left: -30px;
-    margin-bottom: 5%;
-}
-#nacimiento{
-    width: 40%;
+.spanWomen {
+  border: 1px solid #000;
+  margin-left: 10%;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.gender input{
-    width: auto;
-    display: inline;
-    height: auto;
-    margin-bottom: 20px;
+.termsConditions {
+  display: flex;
+  margin: 20px auto 30px;
+  color: gray;
+  justify-content: center;
 }
-.spanMen{
-    border: 1px solid #000;
-    padding: 10px;
-    border-radius: 5px;
+.termsConditions input {
+  width: auto;
+  height: auto;
 }
-.spanWomen{
-    border: 1px solid #000;
-    margin-left: 10%;
-    padding: 10px;
-    border-radius: 5px;
+.termsConditions label {
+  margin-left: 10px;
+  margin-top: auto;
+  text-align: justify;
 }
 
-.termsConditions{
-    display: flex;
-    margin: 20px auto 30px;
-    color: gray;
-}
-.termsConditions input{
-    width: auto;
-    height: auto;
-}
-.termsConditions label{
-    margin-left: 10px;
-    margin-top: auto;
-    text-align: justify;
+.signup {
+  text-align: center;
 }
 
-.signup{
-    text-align: center;
-}
-
-#btnSignUp{
-    width: 60%;
-    height: 50px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    background-color:#e9ae4a;
-    color: #fff;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-    margin-bottom: -15px;
+#btnSignUp {
+  width: 60%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #e9ae4a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: -15px;
 }
 
 /*========================== ADD PRODUCT FORM ===========================*/
-.containerFormAdd{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.containerFormAdd {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.formProductAdd{
-    margin: auto;
-    padding: 5%;
+.formProductAdd {
+  margin: auto;
+  padding: 5%;
 }
 
-.quantityAdd{
-    border: 1px solid rgb(164, 163, 163);
-    background-color: #e9e9ed;
-    border-radius: 5px;
-    text-align: center;
-    text-indent: 5px;
-    padding: 3px;
+.quantityAdd {
+  border: 1px solid rgb(164, 163, 163);
+  background-color: #e9e9ed;
+  border-radius: 5px;
+  text-align: center;
+  text-indent: 5px;
+  padding: 3px;
 }
-.FormProcuctsAdd, .ProductAdd, .fotosPrductos{
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.FormProcuctsAdd,
+.ProductAdd,
+.fotosPrductos {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.descripcionAdd{
-    width: 70%;
+.descripcionAdd {
+  width: 70%;
 }
-.fotosPrductos{
-    width: 48%;
+.fotosPrductos {
+  width: 48%;
 }
-.FotoProdcuto{
-    width: 45%;
+.FotoProdcuto {
+  width: 45%;
 }
 
 .productPicture {
-    margin-top: 20px;
-    padding: 20px;
-    width: 100%;
-    height: 150px;
-    background-color: rgb(199, 196, 196);
-  }
-.ProductAddBtnform{
-    width: 30%;
-    margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(199, 196, 196);
 }
-.ProductAddBtn{
-        width: 100%;
-        height: 50px;
-        border-radius:5px;
-        outline: none;
-        border: none;
-        background-color:#e9ae4a;
-        color: #fff;
-        font-weight: bold;
-        font-size: 15px;
-        cursor: pointer;
-        margin: auto;
+.ProductAddBtnform {
+  width: 30%;
+  margin: auto;
+}
+.ProductAddBtn {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #e9ae4a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin: auto;
 }
 
-.centrado{
-    display: flex;
-    flex-direction: center;
+.centrado {
+  display: flex;
+  flex-direction: center;
 }
-.btn-a{
-    color:#E8AE4A;
+.btn-a {
+  color: #e8ae4a;
 }
 /*========================== MEDIA PRODUCTADD ===========================*/
 /* Diseño para Smartphone */
-@media screen and (max-width:599px){
-    .FotoProdcuto{
-        width: 90%;
-    }
-    .ProductAddBtnform{
-        width: 90%;
-        margin: auto;
-    }
-     .FotoProdcuto input{
-        margin-left: -40px;
-    }
-
+@media screen and (max-width: 599px) {
+  .FotoProdcuto {
+    width: 90%;
+  }
+  .ProductAddBtnform {
+    width: 90%;
+    margin: auto;
+  }
+  .FotoProdcuto input {
+    margin-left: -40px;
+  }
 }
-
 
 /*========================== MEDIA QUERY SIGNUP ===========================*/
 /* Diseño para Smartphone */
-@media screen and (max-width:599px){
-    body .mainSignUp{
-        margin: 60px auto 50px auto;
-    }
-    section .formularySignUp{
-        width: 100%;
-        margin: 20px auto;
-    }
-    section .profilePicture{
-        width: 45%;
-    }
-    section .formSignUp input{
-        height: 45px;
-    }
-    section form #btnSignUp{
-        width: 100%;
-        height: 45px;
-        font-size: 18px;
-    }
+@media screen and (max-width: 599px) {
+  body .mainSignUp {
+    margin: 60px auto 50px auto;
+  }
+  section .formularySignUp {
+    width: 100%;
+    margin: 20px auto;
+  }
+  section .profilePicture {
+    width: 45%;
+  }
+  .formSignUp {
+    width: 90%;
+  }
+  section .formSignUp input {
+    height: 45px;
+  }
+  section form #btnSignUp {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+  }
 }
 
 /* Diseño para Tablet */
-@media screen and (min-width:600px) and (max-width:1023px){
-    body .mainSignUp{
-        margin: 60px auto 0px auto;
-    }
-    section .formularySignUp{
-        width: 70%;
-        margin: 20px auto;
-    }
-    section .profilePicture{
-        width: 40%;
-        height: 180px;
-    }
-    section .formSignUp input{
-        height: 45px;
-    }
-    section form #btnSignUp{
-        width: 100%;
-        height: 45px;
-        font-size: 18px;
-    }
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  body .mainSignUp {
+    margin: 60px auto 0px auto;
+  }
+  section .formularySignUp {
+    width: 90%;
+    margin: 20px auto;
+  }
+  section .profilePicture {
+    width: 40%;
+    height: 180px;
+  }
+  .formSignUp {
+    width: 90%;
+  }
+  section .formSignUp input {
+    height: 45px;
+  }
+  section form #btnSignUp {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+  }
 }
 /*===========================================================================*/
 
 /*========================== LOGIN FORM ===========================*/
-.mainLogin{
-    margin-bottom: -30px;
+.mainLogin {
+  margin-bottom: -30px;
 }
-.formularyLogin{
-    width: 40%;
-    margin: 5% auto;
-    padding: 5%;
-}
-
-.formularyLogin input{
-    font-size: 15px;
-    outline: none;
+.formularyLogin {
+  width: 40%;
+  margin: 5% auto;
+  padding: 5%;
 }
 
-.containerFormLogin input{
-    display: block;   
-    width: 100%;
-    height: 35px;
-    border-radius: 5px;
-    text-indent: 7px;
-}
-.usernameLogin{
-    margin-bottom: 40px;
+.formularyLogin input {
+  font-size: 15px;
+  outline: none;
 }
 
-.textSignup a{
-    color: rgb(189, 27, 12);
-    opacity: 0.5;
+.containerFormLogin input {
+  display: block;
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  text-indent: 7px;
 }
-.textSignup a:hover{
-    opacity: 1;
-}
-
-.login{
-    text-align: center;
-}
-
-#btnLogin{
-    width: 50%;
-    height: 50px;
-    border-radius:5px;
-    outline: none;
-    border: none;
-    background-color:#e9ae4a;
-    color: #fff;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
+.usernameLogin {
+  margin-bottom: 40px;
 }
 
+.textSignup a {
+  color: rgb(189, 27, 12);
+  opacity: 0.5;
+}
+.textSignup a:hover {
+  opacity: 1;
+}
+
+.login {
+  text-align: center;
+}
+
+#btnLogin {
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #e9ae4a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
 
 /*========================= MEDIA QUERY LOGIN =========================*/
 /* Diseño para Smartphone */
-@media screen and (max-width:599px){
-    section .formularyLogin{
-        width: 100%;
-    }
-    section .containerFormLogin input{
-        height: 45px;
-    }
-    section .login{
-        margin-top: 30px;
-    }
-    section div #btnLogin{
-        width: 100%;
-        height: 45px;
-        font-size: 18px;
-    }
+@media screen and (max-width: 599px) {
+  section .formularyLogin {
+    width: 100%;
+  }
+  section .containerFormLogin input {
+    height: 45px;
+  }
+  section .login {
+    margin-top: 30px;
+  }
+  section div #btnLogin {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+  }
 }
 
 /* Diseño para Tablet */
-@media screen and (min-width:600px) and (max-width:1023px){
-    
-    section .formularyLogin{
-        width: 75%; 
-    }
-    section .containerFormLogin input{
-        height: 45px;
-        width: 100%;
-    }
-    section .login{
-        margin-top: 40px;
-    }
-    section div #btnLogin{
-        width: 80%;
-        height: 45px;
-        font-size: 18px;
-    }
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  section .formularyLogin {
+    width: 75%;
+  }
+  section .containerFormLogin input {
+    height: 45px;
+    width: 100%;
+  }
+  section .login {
+    margin-top: 40px;
+  }
+  section div #btnLogin {
+    width: 80%;
+    height: 45px;
+    font-size: 18px;
+  }
 }

@@ -6,9 +6,6 @@ const sequelize = db.sequelize;
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
-//const usersFilePath = path.join(__dirname, '../data/UsersDataBase.json');
-//let usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
 const User = db.User;
 
 const usersC = {
@@ -27,21 +24,35 @@ const usersC = {
   createUser: function (req, res) {
 
     let errors = validationResult(req);
-    const user = req.body.usernameLogin;
+    const user = req.body.usernameSignUp;
     const emailUser = req.body.emailSignUp;
     if (errors.isEmpty()) {
       const BuscaUserEmploy = User.findByPk(user);
       const BuscaEmailEmploy = User.findAll({
         where: {
-          email_e: emailUser
+          email_e: emailUser,
         }
       });
       Promise.all([BuscaUserEmploy, BuscaEmailEmploy])
-        .then((function ([user1, emailUser1]) {
-          console.log(`usaurio: ${user}`);
-          console.log(`email: ${emailUser}`);
-          if (user1 != user) {
-            if (emailUser1 != emailUser ) {
+        .then((function ([user, emailUser]) {
+          if (user) {
+            return res.render('signupAdmin', {
+              errorsUser: {
+                nickUser: {
+                  msg: 'Nombre de usuario registrado previamente'
+                }
+              }
+            })
+          } else {
+            if (emailUser !="") {
+              return res.render('signupAdmin', {
+                errorsUser: {
+                  mailUser: {
+                    msg: 'Email registrado previamente'
+                  }
+                }
+              })
+            } else {
               let passhash = bcryptjs.hashSync(req.body.passwordSingUp, 10);
               if (req.file) {
                 User.create({
@@ -74,30 +85,11 @@ const usersC = {
                   })
                   .catch((e) => res.send(e));
               }
-            } else {
-              console.log("Email registrado previamente");
-              return res.render('signupAdmin', {
-                errorsUser: {
-                  mailUser: {
-                    msg: 'Email registrado previamente'
-                  }
-                }
-              })
             }
-          } else {
-            console.log("Nombre de usuario registrado previamente");
-            return res.render('signupAdmin', {
-              errorsUser: {
-                nickUser: {
-                  msg: 'Nombre de usuario registrado previamente'
-                }
-              }
-            })
           }
         }))
     } else {
       res.render("signupAdmin.ejs", { errors: errors.array(), old: req.body });
-      console.log(errors.array());
       //res.send(errors);
     }
   },

@@ -30,9 +30,10 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+app.use(cookies());
 app.use(userLoggedMiddle);
 
-app.use(cookies());
+
 
 app.use('/', mainRoutes);
 app.use(productRoutes);

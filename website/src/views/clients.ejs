@@ -12,15 +12,16 @@
 
     <div class="container">
       <h2>Clientes Registrados</h2>
-      <section>
+      <section class="usuarios-tabla">
         <% for( let i = 0; i < clientes.length; i++ ) { %>
         <div class="usuario">
-          <% if(clientes[i].imgCli != null){ %> 
+          <% if(clientes[i].imgCli != null){ %>
           <div class="imagenPerfil">
-            <img
-              src="/img/clients/<%=clientes[i].imgCli%>"
-              alt="<%=clientes[i].imgCli%>"
-            />
+            <a href="/clients/detailsCli/<%= clientes[i].username %>">
+              <img
+                src="/img/clients/<%=clientes[i].imgCli%>"
+                alt="<%=clientes[i].imgCli%>"
+            /></a>
           </div>
           <%} else{ %>
           <div class="imagenPerfil">
@@ -36,14 +37,7 @@
                 </a>
               </li>
               <li>Nombre: <%= clientes[i].name %></li>
-              <li>E-mail: <%= clientes[i].email %></li>
-              <li>Fecha de nacimiento:<%= clientes[i].dateborn %></li>
-
-              <% if(clientes[i].sex){%>
-              <li>Género: Mujer</li>
-              <% }else{ %>
-              <li>Género: Hombre</li>
-              <% } %>
+              <li><%= clientes[i].email %></li>
             </ul>
           </div>
         </div>

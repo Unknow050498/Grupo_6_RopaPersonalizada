@@ -1,84 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Registro Administradores - Cool Cloth</title>
     <%- include ('partials/head') %>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--===================================  HEADER ===================================-->
     <%- include ('partials/navBar') %>
-        <!--===============================================================================-->
+    <!--===============================================================================-->
 
-        <main class="mainSignUp">
-            <section>
-                <div>
-                    <h1>Registro de empleados</h1>
-                    <% if (locals.errors) { %>      
-                        <% for(i=0; i< errors.length; i++){ %>
-                            <p class="is-dangeros">
-                                <%=JSON.stringify(errors[i].msg)%>
-                            </p>
-                            <% }%>
-                    <% } %>
-                    <% if (locals.errorsUser && errorsUser.nickUser) { %>
-                        <p class="is-dangeros">  <%= errorsUser.nickUser.msg %> </p>
-                     <% } %> 
-                     <% if (locals.errorsUser && errorsUser.mailUser) { %>
-                        <p class="is-dangeros">  <%= errorsUser.mailUser.msg %> </p>
-                     <% } %> 
-                </div>
-                <form action="/users/addUser" method="post" class="formularySignUp" enctype="multipart/form-data">
-                    <div class="containerForm">
-                        <div class="formSignUp">
-                            <input type="text" name="nameSignUp" id="nameSignUp" class="nameSignUp"
-                            value="<%= locals.old && old.nameSignUp ? old.nameSignUp : '' %>" placeholder="<%= locals.old && old.nameSignUp ? '' : 'Nombre(s) y Apellido' %>" />
+    <main class="mainSignUp">
+      <section>
+        <div>
+          <h1>Registro de empleados</h1>
+          <div class="errores">
+            <ul></ul>
+          </div>
+        </div>
+        <form
+          action="/users/addUser"
+          method="post"
+          class="formularySignUp"
+          id="formularyAdmin"
+          enctype="multipart/form-data"
+        >
+          <div class="containerForm">
+            <div class="formSignUp">
+              <input
+                type="text"
+                name="nameSignUp"
+                id="nameSignUp"
+                value="<%= locals.old && old.nameSignUp ? old.nameSignUp : '' %>"
+                placeholder="<%= locals.old && old.nameSignUp ? '' : 'Nombre(s) y Apellido' %>"
+              />
 
-                            <input type="text" name="usernameSignUp" id="usernameSignUp"
-                            value="<%= locals.old && old.usernameSignUp ? old.usernameSignUp : '' %>" placeholder="<%= locals.old && old.usernameSignUp ? '' : 'Nombre de usuario' %>" />
+              <input
+                type="text"
+                name="usernameSignUp"
+                id="usernameSignUp"
+                value="<%= locals.old && old.usernameSignUp ? old.usernameSignUp : '' %>"
+                placeholder="<%= locals.old && old.usernameSignUp ? '' : 'Nombre de usuario' %>"
+              />
 
-                            <input type="email" name="emailSignUp" id="emailSignUp" class="emailSignUp"
-                            value="<%= locals.old && old.emailSignUp ? old.emailSignUp : '' %>" placeholder="<%= locals.old && old.emailSignUp ? '' : 'Correo Electrónico' %>" />
+              <input
+                type="email"
+                name="emailSignUp"
+                id="emailSignUp"
+                value="<%= locals.old && old.emailSignUp ? old.emailSignUp : '' %>"
+                placeholder="<%= locals.old && old.emailSignUp ? '' : 'Correo Electrónico' %>"
+              />
 
-                            <input type="password" name="passwordSingUp" id="passwordSignUp" class="passwdSingUp"
-                                placeholder="Contraseña" />
-                            <input type="password" name="rpasswordSingUp" id="rasswordSignUp" class="passwdSingUp"
-                                placeholder="Confirmar contraseña" />
-                        </div>
-                        <h4>Fecha de Nacimiento</h4>
-                        <input type="date" name="nacimiento" id="nacimiento" class="nacimiento" />
+              <input
+                type="password"
+                name="passwordSingUp"
+                id="passwordSignUp"
+                class="passwdSingUp"
+                placeholder="Contraseña"
+              />
+              <input
+                type="password"
+                name="rpasswordSingUp"
+                id="rpasswordSignUp"
+                class="passwdSingUp"
+                placeholder="Confirmar contraseña"
+              />
+            </div>
 
-                        <span class="gender">
-                            <h4>Sexo</h4>
-                            <span class="spanMen">
-                                <input type="radio" name="radioSex" id="radioSexMen" class="radioSexMen" value="0" <%= locals.old && old.radioSex === '0' ? 'checked' : ''; %>  />
-                                <label for="men">Hombre</label>
-                            </span>
+            <div class="Part-2">
+              <h4 class="nacimiento-txt">Fecha de Nacimiento</h4>
+              <input
+                type="date"
+                name="nacimiento"
+                id="nacimiento"
+                class="nacimiento"
+              />
 
-                            <span class="spanWomen">
-                                <input type="radio" name="radioSex" id="radioSexWoman" class="radioSexWomen"
-                                    value="1" <%= locals.old && old.radioSex === '1' ? 'checked' : ''; %> />
-                                <label for="women">Mujer</label>
-                            </span>
-                        </span>
-                        <input type="text" name="typeSignUp" id="typeSignUp" value="<%= locals.old && old.typeSignUp ? old.typeSignUp : '' %>" placeholder="<%= locals.old && old.typeSignUp ? '' : 'Cargo' %>"/>
-                        <div class="profile">
-                            <input type="file" name="uploadedImageUser" id="uploadedImageCli"
-                                accept=".jpg, .png, .svg" />
-                        </div>
-                    </div>
+              <span class="gender">
+                <h4>Sexo</h4>
+                <span class="spanMen">
+                  <input type="radio" name="radioSex" id="radioSexMen"
+                  class="radioSexMen" value="0" <%= locals.old && old.radioSex
+                  === '0' ? 'checked' : ''; %> />
+                  <label for="men">Hombre</label>
+                </span>
 
-                    <div class="signup">
-                        <input type="submit" name="btnSignUp" id="btnSignUp" class="btnSignUp" value="Registrar" />
-                    </div>
-                </form>
-            </section>
-        </main>
+                <span class="spanWomen">
+                  <input type="radio" name="radioSex" id="radioSexWoman"
+                  class="radioSexWomen" value="1" <%= locals.old && old.radioSex
+                  === '1' ? 'checked' : ''; %> />
+                  <label for="women">Mujer</label>
+                </span>
+              </span>
+              <input
+                type="text"
+                name="typeSignUp"
+                id="typeSignUp"
+                value="<%= locals.old && old.typeSignUp ? old.typeSignUp : '' %>"
+                placeholder="<%= locals.old && old.typeSignUp ? '' : 'Cargo' %>"
+              />
 
-        <!--=================================== FOOTER ===================================-->
-        <%- include ('partials/footer') %>
-            <!--==============================================================================-->
-</body>
+              <div class="profile">
+                <input
+                  type="file"
+                  name="uploadedImageUser"
+                  id="uploadedImageCli"
+                  accept=".jpg, .png, .svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cuadro-errores">
+            <% if (locals.errors) { %> <% for(i=0; i< errors.length; i++){ %>
+            <p class="is-dangeros"><%=JSON.stringify(errors[i].msg)%></p>
+            <% }%> <% } %> <% if (locals.errorsUser && errorsUser.nickUser) { %>
+            <p class="is-dangeros"><%= errorsUser.nickUser.msg %></p>
+            <% } %> <% if (locals.errorsUser && errorsUser.mailUser) { %>
+            <p class="is-dangeros"><%= errorsUser.mailUser.msg %></p>
+            <% } %>
+          </div>
 
+          <div class="signup">
+            <input
+              type="submit"
+              name="btnSignUp"
+              id="btnSignUp"
+              class="btnSignUp"
+              value="Registrar"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!--=================================== FOOTER ===================================-->
+    <%- include ('partials/footer') %>
+    <!--==============================================================================-->
+    <script src="/js/valFormAdmin.js"></script>
+  </body>
 </html>

@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <form action="" method="" class="searchbar">
+        <form action="/products/search" method="POST" class="searchbar">
             <!--================ BARRA DE BUSQUEDA ================-->
             <input type="search" class="inputSearch" name="searchClothes" placeholder="¿Buscas algo en especial?">
             <!--======================= BOTON DE BUSQUEDA CON ICONO =======================-->
@@ -40,7 +40,7 @@
         <ul class="menu">
             <li><a href="/">Inicio</a></li>
             <% if (locals.isAdmin) { %>
-                <li class="submenu-li"><a href="/products">Productos</a>
+                <li class="submenu-li"><a href="/products">Productos<i class="fas fa-angle-down"></i></a>
                 <ul>
                     <li><a href="/products/addProduct">Agregar Productos</a></li>
                     <li><a href="/products/addStock">Agregar stock</a></li>
@@ -71,11 +71,11 @@
                 <!-- con Usuario  registrado-->
                 <!-- es empleado?-->
                 <% if (locals.isAdmin) { %>
-                    <li class="login"><a href="#"> <img src="/img/users/<%=locals.userLogged.imgProfile%>" alt="img">
+                    <li class="login"><a href="/users/detailsU/<%=locals.userLogged.user_employ%>"> <img src="/img/users/<%=locals.userLogged.imgProfile%>" alt="img">
                         Hola <%=locals.userLogged.name_e%> </a></li>
                     <% }else{ %>
                         <!-- es cliente-->
-                        <li class="login"><a href="#"> <img src="/img/clients/<%=locals.userLogged.imgCli%>" alt="img">
+                        <li class="login"><a href="/clients/detailsCli/<%=locals.userLogged.username%>"> <img src="/img/clients/<%=locals.userLogged.imgCli%>" alt="img">
                                 Hola <%=locals.userLogged.name%> </a></li>
                         <li class="buy"><a href="shoppingcart"><svg aria-hidden="true" focusable="false"
                                     data-prefix="fas" data-icon="shopping-cart" height="18px"

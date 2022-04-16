@@ -1,70 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Registro - Cool Cloth</title>
     <%- include ('partials/head') %>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--===================================  HEADER ===================================-->
     <%- include ('partials/navBar') %>
-        <!--===============================================================================-->
+    <!--===============================================================================-->
 
-        <main class="mainSignUp">
-            <section>
-                <form action="/clients/addCli" method="post" class="formularySignUp" enctype="multipart/form-data">
- 
-                    <div class="containerForm">
-                        <div class="formSignUp">
-                            <input type="text" name="nameSignUpCli" id="nameSignUpCli" class="nameSignUp"
-                                placeholder="Nombre(s) y Apellido" minlength="4" required>
+    <main class="mainSignUp">
+      <section>
+        <form
+          action="/clients/addCli"
+          method="post"
+          class="formularySignUp"
+          enctype="multipart/form-data"
+        >
+          <h1>Registro de Clientes</h1>
+          <div class="containerForm">
+            <div class="formSignUp">
+              <input
+                type="text"
+                name="nameSignUpCli"
+                id="nameSignUpCli"
+                class="nameSignUp"
+                value="<%= locals.old && old.nameSignUpCli ? old.nameSignUpCli : '' %>"
+                placeholder="<%= locals.old && old.nameSignUpCli ? '' : 'Nombre(s) y Apellido' %>"
+              />
 
-                            <input type="text" name="ClinameSignUpCli" id="ClinameSignUpCli" placeholder="Nombre de usuario"
-                                minlength="2" require>
+              <input
+                type="text"
+                name="ClinameSignUpCli"
+                id="ClinameSignUpCli"
+                value="<%= locals.old && old.ClinameSignUpCli ? old.ClinameSignUpCli : '' %>"
+                placeholder="<%= locals.old && old.ClinameSignUpCli ? '' : 'Nombre de usuario' %>"
+              />
 
-                            <input type="email" name="emailSignUpCli" id="emailSignUpCli" class="emailSignUp"
-                                placeholder="Correo Electrónico">
+              <input
+                type="email"
+                name="emailSignUpCli"
+                id="emailSignUpCli"
+                class="emailSignUp"
+                value="<%= locals.old && old.emailSignUpCli ? old.emailSignUpCli : '' %>"
+                placeholder="<%= locals.old && old.emailSignUpCli ? '' : 'Correo Electrónico' %>"
+              />
 
-                            <input type="password" name="passwordSingUpCli" id="passwordSignUpCli" class="passwdSingUp"
-                                placeholder="Contraseña" required>
-                            <input type="password" name="rpasswordSingUpCli" id="rasswordSignUpCli" class="passwdSingUp"
-                                placeholder="Confirmar contraseña" required>
-                        </div>
-                        <h4>Fecha de Nacimiento</h4>
-                        <input type="date" name="nacimientoCli" id="nacimientoCli" class="nacimiento">
+              <input
+                type="password"
+                name="passwordSingUpCli"
+                id="passwordSignUpCli"
+                class="passwdSingUp"
+                placeholder="Contraseña"
+              />
+              <input
+                type="password"
+                name="rpasswordSingUpCli"
+                id="rasswordSignUpCli"
+                class="rpasswdSingUp"
+                placeholder="Confirmar contraseña"
+              />
+            </div>
+            <div>
+              <h4>Fecha de Nacimiento</h4>
+              <input
+                type="date"
+                name="nacimientoCli"
+                id="nacimientoCli"
+                class="nacimiento"
+              />
 
-                        <span class="gender">
-                            <h4>Sexo</h4>
-                            <span class="spanMen">
-                                <input type="radio" name="radioSexCli" id="radioSexCli" class="radioSexMen" value="0">
-                                <label for="men">Hombre</label>
-                            </span>
+              <span class="gender">
+                <h4>Sexo</h4>
+                <span class="spanMen">
+                  <input type="radio" name="radioSexCli" id="radioSexCli"
+                  class="radioSexMen" value="0" <%=locals.old &&
+                  old.radioSexCli==='0' ? 'checked' : '' ; %> />
+                  <label for="men">Hombre</label>
+                </span>
 
-                            <span class="spanWomen">
-                                <input type="radio" name="radioSexCli" id="radioSexCli" class="radioSexWomen" value="1">
-                                <label for="women">Mujer</label>
-                            </span>
-                        </span>
-                        <div class="profile">
-                            <input type="file" name="uploadedImageCli" id="uploadedImageCli" accept=".jpg, .png, .svg">
-                        </div>
-                        <div class="termsConditions">
-                            <input type="checkbox" name="terms_conditionsCli" id="terms-conditionsCli" required><label>Aceptas
-                                nuestras Condiciones, la Política de datos y la Política de cookies.</label>
-                        </div>
-                    </div>
+                <span class="spanWomen">
+                  <input type="radio" name="radioSexCli" id="radioSexCli"
+                  class="radioSexWomen" value="1" <%=locals.old &&
+                  old.radioSexCli==='1' ? 'checked' : '' ; %> />
+                  <label for="women">Mujer</label>
+                </span>
+              </span>
+              <div class="profile">
+                <input
+                  type="file"
+                  name="uploadedImageCli"
+                  id="uploadedImageCli"
+                  accept=".jpg, .png, .svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="cuadro-errores">
+            <div>
+              <% if (locals.errors) { %> <% for(i=0; i< errors.length; i++){ %>
+              <ul>
+                <li class="is-dangeros"><%=JSON.stringify(errors[i].msg)%></li>
+              </ul>
 
-                    <div class="signup">
-                        <input type="submit" name="btnSignUp" id="btnSignUp" class="btnSignUp" value="Registrar">
-                    </div>
-                </form>
-            </section>
-        </main>
+              <% }%> <% } %> <% if (locals.errorsUser && errorsUser.nickUser) {
+              %>
+              <p class="is-dangeros"><%= errorsUser.nickUser.msg %></p>
+              <% } %> <% if (locals.errorsUser && errorsUser.mailUser) { %>
+              <p class="is-dangeros"><%= errorsUser.mailUser.msg %></p>
+              <% } %>
+            </div>
+            <div class="errores">
+              <ul></ul>
+            </div>
+          </div>
+          <div class="termsConditions">
+            <input
+              type="checkbox"
+              name="terms_conditionsCli"
+              id="terms-conditionsCli"
+            /><label
+              >Aceptas nuestras Condiciones, la Política de datos y la Política
+              de cookies.
+            </label>
+          </div>
+          <div class="signup">
+            <input
+              type="submit"
+              name="btnSignUp"
+              id="btnSignUp"
+              class="btnSignUp"
+              value="Registrar"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
 
-        <!--=================================== FOOTER ===================================-->
-        <%- include ('partials/footer') %>
-            <!--==============================================================================-->
-</body>
-
+    <!--=================================== FOOTER ===================================-->
+    <%- include ('partials/footer') %>
+    <!--==============================================================================-->
+    <script src="/js/valFormClient.js"></script>
+  </body>
 </html>

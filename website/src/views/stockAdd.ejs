@@ -15,12 +15,24 @@
             
             <section>
                 <h2 class="subtitulos">Llenar Inventario</h2>
+                <% if (locals.errors) { %>      
+                    <% for(i=0; i< errors.length; i++){ %>
+                        <p class="is-dangeros">
+                            <%=JSON.stringify(errors[i].msg)%>
+                        </p>
+                        <% }%>
+                <% } %>
+                <% if (locals.errorsProduct && errorsProduct.photoProduct) { %>
+                    <p class="is-dangeros">  <%= errorsProduct.photoProduct.msg %> </p>
+                 <% } %>
                 <form action="/products/addStock" method="POST" class="formularyProcuctAdd" enctype="multipart/form-data">
                     <div class="containerFormAdd">
                         <div class="formProductAdd">
-
+                            <div class="errores">
+                                <ul></ul>
+                            </div>
                             <div class="FormProcuctsAdd">
-                                <select name="model" id="" required>
+                                <select name="model" id="" class="modelo">
                                     <option value="" disabled selected>- Seleccione el Modelo - </option>
                                     <% productos.forEach(modelos => { %>
                                     <option value="<%= modelos.model_Products %>"><%= modelos.model_Products %></option>
@@ -29,7 +41,7 @@
                             </div>
                             <div class="ProductAdd">
                                 <label for="color">Color:</label>
-                                <select name="color" style="font-size: 14px; outline: none;">
+                                <select name="color" class="color" style="font-size: 14px; outline: none;">
                                     <option value="" disabled selected>- Seleccione el color - </option>
                                     <% colores.forEach(colores => { %>
                                      <option value="<%= colores.id_Color %>"><%= colores.name_color%></option>
@@ -40,7 +52,7 @@
 
                             <div class="ProductAdd">
                                 <label for="size">Talla:</label>
-                                <select name="size" style="font-size: 14px; outline: none;">
+                                <select name="size" class="talla" style="font-size: 14px; outline: none;">
                                     <option value="" disabled selected>- Seleccione la talla - </option>
                                     <% tallas.forEach(tallas => { %>
                                      <option value="<%= tallas.id_Sizes %>"><%= tallas.size%></option>
@@ -49,12 +61,12 @@
                             </div>
                             <div class="FormProcuctsAdd">
                                 <label for="amount">Cantidad:</label>
-                                <input type="number" name="amount" placeholder="0" minlength="1" required>
+                                <input type="number" name="amount" placeholder="0" minlength="1" class="cantidad">
                             </div>
                         
                             <div class="profile">
                                 <div id="fotoProducto1"></div>
-                                <input type="file" accept=".jpg, .png, .svg" name='uploadedImageStock'/>>
+                                <input type="file" accept=".jpg, .png, .svg" name='uploadedImageStock' class="fotoStock"/>
                             </div>
                         </div>
                     </div>
@@ -69,6 +81,7 @@
         <!--=================================== FOOTER ===================================-->
         <%- include ('partials/footer') %>
             <!--==============================================================================-->
+     <script src="/js/valFormStock.js"></script>   
 </body>
 
 </html>

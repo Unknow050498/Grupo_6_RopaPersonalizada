@@ -18,3 +18,34 @@ La comunicación ha sido efectiva a traves de slack y en zoom en clase <br>
 ### Areas de oportunidad
 Administrar mejor el tiempo, ya que al ser sólo dos personas a veces se complica <br>
 Cuidar los detalles para evitar fallos inesperados
+
+## Retro Spring 5 
+### Retros buenas
+Pudimos avanzar en requerimentos que se solicitaban aunque faltaron integrar algunos<br>
+La división de tareas es efectiva <br>
+La comunición es efectiva por medio de slack y zoom
+
+### Areas de oportunidad
+Concluir con temas que quedaron pendientes, por falta de tiempo<br>
+Mejor manejo de los tiempos <br>
+Seguimiento a las asignaciones<br>
+
+## Retro Spring 6
+### Retros buenas
+Pudimos trabajar en conjunto para definir la estructura de la base de datos<br>
+Se implemento adecuadamente la base de datos <br>
+Se implementaron faltantes que hacian de otros sprints<br>
+Apoyo en áreas menos fuertes para el otro<br>
+
+### Areas de oportunidad
+Mejor comunicación con las asignaciones<br>
+Mayor cooperación en las actividades <br>
+Seguimiento a las asignaciones 
+
+## Retro Spring 7
+### Retros buenas
+
+Se sigue avanzando con los requerimentos del spring y faltantes<br>
+
+### Areas de oportunidad
+Mejorar la comunicación con el equipo
