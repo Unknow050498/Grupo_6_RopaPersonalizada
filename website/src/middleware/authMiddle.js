@@ -1,8 +1,5 @@
 function authMiddle(req, res, next){
-    if(!req.session.userLogged){
-        return res.redirect('/login');
-    }
-    next();
+   JSON.stringify(carrito.stock[0].id_Stock
 }
 
 module.exports = authMiddle;
